@@ -15,11 +15,3 @@ echo $var3; // Exibe: 3.5, resultado de 5 - 1.5
 echo $var4; // Exibe: 20, resultado de 4 vezes 5
 echo $var5; // Exibe: 2.5
 ```
-
-{% exercise %}
-Crie uma variável chamada `$calculo` com qualquer operação matemática cujo resultado seja `10`.
-{% solution %}
-$calculo = 5 + 5;
-{% validation %}
-assert($calculo == 10);
-{% endexercise %}

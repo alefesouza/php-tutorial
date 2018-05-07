@@ -11,11 +11,3 @@ $idade = 21;
 echo $nome; // Exibe na tela: Alefe
 echo $idade; // Exibe na tela: 21
 ```
-
-{% exercise %}
-Crie uma variável chamada `linguagem` com valor `php`.
-{% solution %}
-$linguagem = 'php';
-{% validation %}
-assert($linguagem == 'php');
-{% endexercise %}
