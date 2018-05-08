@@ -8,8 +8,6 @@ e declaramos funções, segue o hello world (script mais básico) do PHP:
 <?php
 
 echo 'Hello World';
-
-?>
 ```
 
 Esse código gera o seguinte:
@@ -18,8 +16,26 @@ Esse código gera o seguinte:
 
 Analisando o código acima, iniciamos com um comentário apenas para indicar que estamos editando um arquivo chamado "index.php", como você pode ver o index.php na barra de endereços da imagem acima.
 
-Apenas o que estiver dentro de `<?php ?>` será processado pelo PHP, o que estiver fora disso, será enviado normalmente para o navegador como HTML, caso você vá escrever apenas código PHP em um arquivo, é recomendado você não colocar o fechamento `?>`.
+* Apenas o que estiver dentro de `<?php ?>` será processado pelo PHP, o que estiver fora disso, será enviado normalmente para o navegador como HTML, caso você vá escrever apenas código PHP em um arquivo, é recomendado você não colocar o fechamento `?>`.
 
-Tudo que estiver após o `echo` será enviado para o navegador, pode ser um texto (string), operações matemáticas, variáveis, etc.
+* Tudo que estiver após o `echo` será enviado para o navegador, pode ser um texto (string), operações matemáticas, variáveis, etc.
 
-Todo comando como declaração de variáveis, chamada de funções e o echo, deve terminar como ; (ponto e vírgula), se não terá uma mensagem de erro de sintaxe.
+* Todo comando como declaração de variáveis, chamada de funções e o echo, deve terminar como ; (ponto e vírgula), se não terá uma mensagem de erro de sintaxe.
+
+* Embora seja uma boa prática em todas as linguagens de programação, você não precisa deixar todo código PHP indentado assim como na linguagem Python, mas o ideal como programador é fingir que seu código não funciona caso não esteja indentado não importa a linguagem, portanto sempre indente seu código, o recomendado pela comunidade PHP é utilizar indentação de 4 espaços.
+
+## Comentários
+
+Comentários são mensagens que você pode deixar livremente pelo código, seja para documentar o código, marcar algo para fazer no futuro, ~~deixar mensagens para quem for modificar o código no futuro~~, no PHP ultilizamos // para comentários de uma linha e /\* \*/ para comentários com diversas linhas, exemplo:
+
+```php
+// Comentário de uma linha
+echo 'Código PHP';
+/*
+Comentário
+de
+diversas
+linha
+*/
+echo 'Código PHP';
+```

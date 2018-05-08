@@ -6,7 +6,6 @@
 * [O PHP](php/README.md)
   * [Iniciando](php/getting-started.md)
   * [Sintaxe](php/syntax.md)
-  * [Comentários](php/comments.md)
 * [Variáveis](variables/README.md)
   * [Números](variables/numbers.md)
   * [Strings](variables/strings.md)
