@@ -148,19 +148,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../php/comments.md">
-            
-                <span>
-            
-                    
-                    Comentários
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -469,7 +456,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="condicionais">Condicionais</h1>
+                                <h1 id="condicionais-if">Condicionais: if</h1>
+<p>Com o comando if (se) podemos fazer compara&#xE7;&#xF5;es, executando um c&#xF3;digo se determinada condi&#xE7;&#xE3;o for verdadeira e, caso queira, adicionar mais condi&#xE7;&#xF5;es que podem executar outros c&#xF3;digos caso a primeira condi&#xE7;&#xE3;o n&#xE3;o for verdadeira, e por fim executar outro c&#xF3;digo caso n&#xE3;o passe em nenhuma das condi&#xE7;&#xF5;es anteriores, observe os exemplos a seguir:</p>
+<pre><code class="lang-php">$nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
+
+<span class="hljs-keyword">if</span> ($nome == <span class="hljs-string">&apos;Alefe&apos;</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;O valor da vari&#xE1;vel $nome &#xE9; Alefe&apos;</span>;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;O valor da vari&#xE1;vel $nome n&#xE3;o &#xE9; Alefe&apos;</span>;
+}
+</code></pre>
+<p>Note que usamos o comparador == para verificar o valor da vari&#xE1;vel $nome, que se caso for igual a &apos;Alefe&apos;, executar&#xE1; o primeiro bloco de c&#xF3;digo, sen&#xE3;o (else) executar&#xE1; o segundo.</p>
+<p>Podemos tamb&#xE9;m fazer compara&#xE7;&#xF5;es com n&#xFA;meros:</p>
+<pre><code class="lang-php">$numero = <span class="hljs-number">5</span>;
+
+<span class="hljs-keyword">if</span> ($numero &gt; <span class="hljs-number">10</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior que 10&apos;</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &gt; <span class="hljs-number">7</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior que 7&apos;</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &gt;= <span class="hljs-number">5</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior ou igual a 5&apos;</span>; <span class="hljs-comment">// esse c&#xF3;digo ser&#xE1; executado</span>
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &gt;= <span class="hljs-number">3</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior ou igual a tr&#xEA;s&apos;</span>;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero possui um valor diferente das condicionais anteriores&apos;</span>;
+}
+</code></pre>
+<p>Note que apenas a terceira condi&#xE7;&#xE3;o ser&#xE1; executada, pois ela possui um valor maior ou igual a 5 e &#xE9; a primeira a ser verdadeira, pois n&#xE3;o passa em nenhuma das condi&#xE7;&#xF5;es anteriores, por&#xE9;m as condi&#xE7;&#xF5;es seguintes, como a que compara se a vari&#xE1;vel $numero &#xE9; maior ou igual a 3, n&#xE3;o ser&#xE3;o executadas por estarem no mesmo else if, apenas uma condi&#xE7;&#xE3;o pode ser executada em um if com v&#xE1;rias condi&#xE7;&#xF5;es, mas voc&#xEA; pode iniciar novas condicionais normalmente, bastando apenas n&#xE3;o colocar &quot;else&quot; antes do comando &quot;if&quot;, no pr&#xF3;ximo c&#xF3;digo h&#xE1; um exemplo.</p>
+<p>Existem outras condicionais, para comparar se um n&#xFA;mero &#xE9; menor que outro ou se determinado valor &#xE9; diferente, por exemplo:</p>
+<pre><code class="lang-php">$numero = <span class="hljs-number">-5</span>;
+
+<span class="hljs-keyword">if</span> ($numero &gt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; um n&#xFA;mero positivo&apos;</span>;
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; um n&#xFA;mero negativo&apos;</span>; <span class="hljs-comment">// Ser&#xE1; exibido na tela</span>
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; igual a 0&apos;</span>;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero n&#xE3;o &#xE9; um n&#xFA;mero&apos;</span>;
+}
+
+<span class="hljs-keyword">if</span> ($numero != <span class="hljs-number">5</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; diferente de 5&apos;</span>; <span class="hljs-comment">// Ser&#xE1; exibido na tela</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; igual a 5;
+}
+</span></code></pre>
+<h2 id="m&#xFA;ltiplas-condi&#xE7;&#xF5;es">M&#xFA;ltiplas condi&#xE7;&#xF5;es</h2>
+<p>Assim como outras linguagens de programa&#xE7;&#xE3;o podemos realizar m&#xFA;ltiplas condi&#xE7;&#xF5;es, no c&#xF3;digo a seguir, todos os blocos ser&#xE3;o executados:</p>
+<pre><code class="lang-php">$numero = <span class="hljs-number">5</span>;
+$nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
+
+<span class="hljs-keyword">if</span> ($numero &gt;= <span class="hljs-number">3</span> &amp;&amp; $numero &lt;= <span class="hljs-number">7</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior ou igual a 3 e menor ou igual a 7&apos;</span>;
+}
+
+<span class="hljs-keyword">if</span> ($numero == <span class="hljs-number">5</span> || $numero == <span class="hljs-number">3</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; igual a 5 ou igual a 3&apos;</span>;
+}
+
+<span class="hljs-keyword">if</span> ($numero != <span class="hljs-number">7</span> &amp;&amp; $nome == <span class="hljs-string">&apos;Alefe&apos;</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; diferente de 7 e a vari&#xE1;vel $nome &#xE9; igual a &quot;Alefe&quot;&apos;</span>;
+}
+</code></pre>
 
                                 
                                 </section>
@@ -513,7 +562,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"if","level":"1.4.1","depth":2,"next":{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]},"previous":{"title":"Condicionais","level":"1.4","depth":1,"path":"conditionals/README.md","ref":"conditionals/README.md","articles":[{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises"],"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conditionals/if.md","mtime":"2018-05-06T23:41:57.010Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-07T04:09:21.424Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"if","level":"1.4.1","depth":2,"next":{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]},"previous":{"title":"Condicionais","level":"1.4","depth":1,"path":"conditionals/README.md","ref":"conditionals/README.md","articles":[{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conditionals/if.md","mtime":"2018-05-08T01:49:00.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-08T01:36:42.874Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -538,6 +587,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

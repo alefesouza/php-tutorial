@@ -148,19 +148,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="../php/comments.md">
-            
-                <span>
-            
-                    
-                    Comentários
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -470,6 +457,18 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="condicionais">Condicionais</h1>
+<p>Nas linguagens de programa&#xE7;&#xE3;o &#xE9; muito comum usarmos condicionais, que s&#xE3;o blocos de c&#xF3;digo que ser&#xE3;o executados se determinada condi&#xE7;&#xE3;o for verdadeira, por exemplo:</p>
+<pre><code class="lang-php">$var1 = <span class="hljs-number">3</span>;
+$var2 = <span class="hljs-number">2</span>;
+
+<span class="hljs-keyword">if</span> ($var1 + $var2 == <span class="hljs-number">5</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$var1 + $var2 &#xE9; igual a 5&quot;</span>; <span class="hljs-comment">// Exibe na tela: 3 + 2 &#xE9; igual a 5</span>
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$var1 + $var2 n&#xE3;o &#xE9; igual a 5 (?)&quot;</span>;
+}
+</code></pre>
+<p>Nesse caso a segunda condi&#xE7;&#xE3;o nunca ser&#xE1; executada, pois o valor da vari&#xE1;vel $var1 somado com o valor da $var2 &#xE9; 5.</p>
+<p>Detalhes como o else e condicionais mais avan&#xE7;adas ser&#xE3;o abordadas na pr&#xF3;xima p&#xE1;gina.</p>
 
                                 
                                 </section>
@@ -513,7 +512,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Condicionais","level":"1.4","depth":1,"next":{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},"previous":{"title":"Strings","level":"1.3.2","depth":2,"path":"variables/strings.md","ref":"variables/strings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises"],"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conditionals/README.md","mtime":"2018-05-07T00:13:03.100Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-07T04:09:21.424Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Condicionais","level":"1.4","depth":1,"next":{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},"previous":{"title":"Strings","level":"1.3.2","depth":2,"path":"variables/strings.md","ref":"variables/strings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conditionals/README.md","mtime":"2018-05-08T01:36:21.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-08T01:36:42.874Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -538,6 +537,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
