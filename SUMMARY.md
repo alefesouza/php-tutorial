@@ -13,6 +13,7 @@
   * [if](conditionals/if.md)
   * [switch](conditionals/switch.md)
 * [Arrays](arrays/README.md)
+  * [Índice](arrays/indice.md)
   * [Chave-Valor](arrays/key-value.md)
   * [Multidimensional](arrays/multidimensional.md)
 * [Funções](functions/README.md)
