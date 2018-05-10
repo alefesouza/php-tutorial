@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Arrays · GitBook</title>
+        <title>Funções globais · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="indice.html" />
+    <link rel="next" href="../loops/" />
     
     
-    <link rel="prev" href="../conditionals/switch.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -243,9 +243,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../arrays/">
             
-                <a href="./">
+                <a href="../arrays/">
             
                     
                     Arrays
@@ -257,9 +257,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="indice.html">
+        <li class="chapter " data-level="1.5.1" data-path="../arrays/indice.html">
             
-                <a href="indice.html">
+                <a href="../arrays/indice.html">
             
                     
                     Índice
@@ -270,9 +270,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="key-value.html">
+        <li class="chapter " data-level="1.5.2" data-path="../arrays/key-value.html">
             
-                <a href="key-value.html">
+                <a href="../arrays/key-value.html">
             
                     
                     Chave-Valor
@@ -283,9 +283,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="multidimensional.html">
+        <li class="chapter " data-level="1.5.3" data-path="../arrays/multidimensional.html">
             
-                <a href="multidimensional.html">
+                <a href="../arrays/multidimensional.html">
             
                     
                     Multidimensional
@@ -301,9 +301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../functions/">
+        <li class="chapter " data-level="1.6" data-path="./">
             
-                <a href="../functions/">
+                <a href="./">
             
                     
                     Funções
@@ -315,9 +315,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../functions/globals.html">
+        <li class="chapter active" data-level="1.6.1" data-path="globals.html">
             
-                <a href="../functions/globals.html">
+                <a href="globals.html">
             
                     
                     Funções globais
@@ -473,7 +473,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Arrays</a>
+        <a href=".." >Funções globais</a>
     </h1>
 </div>
 
@@ -488,18 +488,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="arrays">Arrays</h1>
-<p>Explicando de forma muito simples, arrays s&#xE3;o formas de armazenar v&#xE1;rios valores em uma s&#xF3; vari&#xE1;vel, muito &#xFA;til quando precisamos armazenar listas ou algo que seja m&#xFA;ltipla coisa, veja o exemplo de array a seguir:</p>
-<pre><code class="lang-php">$nomes = [<span class="hljs-string">&apos;Ada&apos;</span>, <span class="hljs-string">&apos;Alefe&apos;</span>, <span class="hljs-string">&apos;Charles&apos;</span>];
+                                <h1 id="fun&#xE7;&#xF5;es-globais">Fun&#xE7;&#xF5;es globais</h1>
+<p>O PHP possui <strong>muitas</strong> fun&#xE7;&#xF5;es globais &#xFA;teis para o dia a dia do desenvolvedor, elas est&#xE3;o sempre dispon&#xED;veis sem voc&#xEA; precisar importar nada, vou citar algumas das mais simples e utilizadas:</p>
+<h2 id="retornar-n&#xFA;meros-de-itens-em-um-array">Retornar n&#xFA;meros de itens em um array</h2>
+<pre><code class="lang-php">$array1 = [<span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">5</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>];
+$array2 = [<span class="hljs-string">&apos;Alefe&apos;</span>, <span class="hljs-string">&apos;Rasmus&apos;</span>, <span class="hljs-string">&apos;Brandan&apos;</span>];
 
-<span class="hljs-keyword">echo</span> $nomes[<span class="hljs-number">0</span>]; <span class="hljs-comment">// Exibe: Ada</span>
-<span class="hljs-keyword">echo</span> $nomes[<span class="hljs-number">2</span>]; <span class="hljs-comment">// Exibe: Charles</span>
+<span class="hljs-keyword">echo</span> count($array1); <span class="hljs-comment">// Exibe: 7</span>
+<span class="hljs-keyword">echo</span> count($array2); <span class="hljs-comment">// Exibe: 3</span>
 </code></pre>
-<p>Note que armazenamos tr&#xEA;s valores na vari&#xE1;vel nome, e podemos acess&#xE1;-los utilizando o nome da vari&#xE1;vel seguido do n&#xFA;mero do &#xED;ndice ou chave.</p>
-<p>Pode ser que voc&#xEA; encontre arrays sendo declarados da seguinte forma:</p>
-<pre><code class="lang-php">$nomes = <span class="hljs-keyword">array</span>(<span class="hljs-string">&apos;Ada&apos;</span>, <span class="hljs-string">&apos;Alefe&apos;</span>, <span class="hljs-string">&apos;Charles&apos;</span>);
+<p>Voc&#xEA; pode usar o valor retornado normalmente como um n&#xFA;mero comum, pois &#xE9; um n&#xFA;mero.</p>
+<h2 id="verificar-se-determinada-string-possui-outra">Verificar se determinada string possui outra</h2>
+<pre><code class="lang-php">$frase = <span class="hljs-string">&apos;PHP &#xE9; um linguagem de programa&#xE7;&#xE3;o&apos;</span>;
+
+<span class="hljs-keyword">if</span> (strpos($frase, <span class="hljs-string">&apos;linguagem&apos;</span>) !== <span class="hljs-keyword">false</span>) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $frase possui a palavra &quot;linguagem&quot;&apos;</span>;
+}
 </code></pre>
-<p>Em vers&#xF5;es muito antigas do PHP essa era a &#xFA;nica forma de declarar arrays, mas s&#xF3; muda usar array(valores) ao inv&#xE9;s de [valores], o resto funciona da mesma forma.</p>
+<p>&#xC9; meio estranho essa compara&#xE7;&#xE3;o !== false, mas tem toda uma hist&#xF3;ria por causa do PHP ser uma linguagem fracamente tipada e ter se originado do C, seria t&#xE3;o bom se fosse simplesmente &quot;string&quot;.contains(&quot;&quot;)...</p>
+<h2 id="mudar-uma-parte-de-uma-string-por-outra">Mudar uma parte de uma string por outra</h2>
+<pre><code class="lang-php">$frase = <span class="hljs-string">&apos;PHP &#xE9; um linguagem de programa&#xE7;&#xE3;o&apos;</span>;
+
+<span class="hljs-keyword">echo</span> str_replace(<span class="hljs-string">&apos;PHP&apos;</span>, <span class="hljs-string">&apos;JavaScript&apos;</span>, $frase); <span class="hljs-comment">// Exibe: JavaScript &#xE9; uma linguagem de programa&#xE7;&#xE3;o</span>
+</code></pre>
+<h2 id="ordernar-um-array">Ordernar um array</h2>
+<pre><code class="lang-php">$array = [<span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>];
+
+sort($array);
+
+<span class="hljs-comment">// Valor de $array passa a ser:</span>
+<span class="hljs-comment">// [3, 5, 7, 8, 9]</span>
+</code></pre>
+<p>Voc&#xEA; pode ver fun&#xE7;&#xF5;es globais na documenta&#xE7;&#xE3;o oficial do PHP, aqui est&#xE3;o alguns exemplos em portugu&#xEA;s de fun&#xE7;&#xF5;es globais para <a href="http://php.net/manual/pt_BR/book.var.php" target="_blank">vari&#xE1;veis</a>, <a href="http://php.net/manual/pt_BR/book.strings.php" target="_blank">strings</a> e <a href="http://php.net/manual/pt_BR/book.array.php" target="_blank">arrays</a>.</p>
 
                                 
                                 </section>
@@ -527,12 +547,12 @@
 
             
                 
-                <a href="../conditionals/switch.html" class="navigation navigation-prev " aria-label="Previous page: switch">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Funções">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="indice.html" class="navigation navigation-next " aria-label="Next page: Índice">
+                <a href="../loops/" class="navigation navigation-next " aria-label="Next page: Comandos de repetição">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -543,7 +563,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Arrays","level":"1.5","depth":1,"next":{"title":"Índice","level":"1.5.1","depth":2,"path":"arrays/indice.md","ref":"arrays/indice.md","articles":[]},"previous":{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"arrays/README.md","mtime":"2018-05-09T02:51:51.196Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-10T03:17:16.846Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Funções globais","level":"1.6.1","depth":2,"next":{"title":"Comandos de repetição","level":"1.7","depth":1,"path":"loops/README.md","ref":"loops/README.md","articles":[{"title":"for","level":"1.7.1","depth":2,"path":"loops/for.md","ref":"loops/for.md","articles":[]},{"title":"while","level":"1.7.2","depth":2,"path":"loops/while.md","ref":"loops/while.md","articles":[]},{"title":"do...while","level":"1.7.3","depth":2,"path":"loops/do-while.md","ref":"loops/do-while.md","articles":[]}]},"previous":{"title":"Funções","level":"1.6","depth":1,"path":"functions/README.md","ref":"functions/README.md","articles":[{"title":"Funções globais","level":"1.6.1","depth":2,"path":"functions/globals.md","ref":"functions/globals.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"functions/globals.md","mtime":"2018-05-10T03:18:36.748Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-10T03:17:16.846Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

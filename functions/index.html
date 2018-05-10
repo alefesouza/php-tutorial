@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../loops/" />
+    <link rel="next" href="globals.html" />
     
     
     <link rel="prev" href="../arrays/multidimensional.html" />
@@ -312,6 +312,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="globals.html">
+            
+                <a href="globals.html">
+            
+                    
+                    Funções globais
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.7" data-path="../loops/">
@@ -333,7 +352,7 @@
                 <a href="../loops/for.html">
             
                     
-                    For
+                    for
             
                 </a>
             
@@ -346,7 +365,7 @@
                 <a href="../loops/while.html">
             
                     
-                    While
+                    while
             
                 </a>
             
@@ -359,7 +378,7 @@
                 <a href="../loops/do-while.html">
             
                     
-                    Do...While
+                    do...while
             
                 </a>
             
@@ -470,6 +489,41 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="fun&#xE7;&#xF5;es">Fun&#xE7;&#xF5;es</h1>
+<p>Fun&#xE7;&#xE3;o &#xE9; um modo de dar nome a um bloco de c&#xF3;digo e cham&#xE1;-lo quantas vezes quiser, mudando o valor de apenas algumas coisas ou nenhuma, veja o exemplo a seguir:</p>
+<pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">soma</span><span class="hljs-params">($num1, $num2)</span> </span>{
+    <span class="hljs-keyword">return</span> $num1 + $num2;
+}
+
+<span class="hljs-keyword">echo</span> soma(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// Exibe: 5</span>
+</code></pre>
+<p>Analisando o c&#xF3;digo acima, usamos a palavra reservada <code>function</code> seguido do nome que queremos dar a fun&#xE7;&#xE3;o, e ent&#xE3;o colocamos entre parentes os argumentos da fun&#xE7;&#xE3;o, que funcionam como vari&#xE1;veis, podendo usar e ser modificado dentro do bloco da fun&#xE7;&#xE3;o.</p>
+<p>Usamos a palavra reservada <code>return</code> para retorna algum valor ou parar a execu&#xE7;&#xE3;o dela, o que n&#xE3;o &#xE9; obrigat&#xF3;rio caso voc&#xEA; queira apenas repetir um algoritmo, &#xE9; comum ter um return vazio dentro de condicionais em fun&#xE7;&#xF5;es que n&#xE3;o retornam valor, exemplo:</p>
+<pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">teste</span><span class="hljs-params">($nome)</span> </span>{
+    <span class="hljs-keyword">if</span> ($nome == <span class="hljs-string">&apos;Alefe&apos;</span>)  {
+         <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem exibida se $nome for igual a Alefe&apos;</span>;
+         <span class="hljs-keyword">return</span>;
+    }
+
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A fun&#xE7;&#xE3;o continua se $numero n&#xE3;o for igual a Alefe&apos;</span>;
+}
+
+teste(<span class="hljs-string">&apos;Alefe&apos;</span>); <span class="hljs-comment">// Exibe apenas o primeiro echo</span>
+teste(<span class="hljs-string">&apos;Rasmus&apos;</span>); <span class="hljs-comment">// Exibe apenas o segundo echo</span>
+</code></pre>
+<p>Caso n&#xE3;o tivesse o <code>return</code> no exemplo acima, a chamada de fun&#xE7;&#xE3;o <code>teste(&apos;Alefe&apos;)</code> exibiria as duas mensagens.</p>
+<p>Os argumentos Tamb&#xE9;m n&#xE3;o &#xE9; obrigat&#xF3;rio fun&#xE7;&#xF5;es terem argumentos, voc&#xEA; pode us&#xE1;-las somente pra evitar repeti&#xE7;&#xE3;o de c&#xF3;digo mesmo:</p>
+<pre><code class="lang-php">funciona teste() {
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 1&apos;</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 2&apos;</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 3&apos;</span>;
+}
+
+teste();
+teste();
+teste();
+</code></pre>
+<p>O c&#xF3;digo acima exibe 9 mensagens na tela, pois &#xE9; chamada tr&#xEA;s vezes uma fun&#xE7;&#xE3;o que exibe tr&#xEA;s mensagens.</p>
+<p>O corpo de uma fun&#xE7;&#xE3;o pode ter qualquer c&#xF3;digo PHP e os argumentos e retornos podem ser de qualquer tipo, n&#xFA;meros, strings, arrays e at&#xE9; outras fun&#xE7;&#xF5;es.</p>
 
                                 
                                 </section>
@@ -502,7 +556,7 @@
                 </a>
                 
                 
-                <a href="../loops/" class="navigation navigation-next " aria-label="Next page: Comandos de repetição">
+                <a href="globals.html" class="navigation navigation-next " aria-label="Next page: Funções globais">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -513,7 +567,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Funções","level":"1.6","depth":1,"next":{"title":"Comandos de repetição","level":"1.7","depth":1,"path":"loops/README.md","ref":"loops/README.md","articles":[{"title":"For","level":"1.7.1","depth":2,"path":"loops/for.md","ref":"loops/for.md","articles":[]},{"title":"While","level":"1.7.2","depth":2,"path":"loops/while.md","ref":"loops/while.md","articles":[]},{"title":"Do...While","level":"1.7.3","depth":2,"path":"loops/do-while.md","ref":"loops/do-while.md","articles":[]}]},"previous":{"title":"Multidimensional","level":"1.5.3","depth":2,"path":"arrays/multidimensional.md","ref":"arrays/multidimensional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises"],"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"functions/README.md","mtime":"2018-05-06T23:42:26.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-09T02:49:46.830Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Funções","level":"1.6","depth":1,"next":{"title":"Funções globais","level":"1.6.1","depth":2,"path":"functions/globals.md","ref":"functions/globals.md","articles":[]},"previous":{"title":"Multidimensional","level":"1.5.3","depth":2,"path":"arrays/multidimensional.md","ref":"arrays/multidimensional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"functions/README.md","mtime":"2018-05-10T02:03:04.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-10T03:17:16.846Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -538,6 +592,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
