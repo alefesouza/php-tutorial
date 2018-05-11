@@ -22,6 +22,8 @@
   * [for](loops/for.md)
   * [while](loops/while.md)
   * [do...while](loops/do-while.md)
+  * [foreach](loops/foreach.md)
+  * [continue; break;](loops/continue-break.md)
 * [Uso com HTML](html/README.md)
 * [Banco de dados](database/README.md)
 * [Orientação a objetos](oop/README.md)
