@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>do...while · GitBook</title>
+        <title>continue; break; · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="foreach.html" />
+    <link rel="next" href="../html/" />
     
     
-    <link rel="prev" href="while.html" />
+    <link rel="prev" href="foreach.html" />
     
 
     </head>
@@ -373,7 +373,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.3" data-path="do-while.html">
+        <li class="chapter " data-level="1.7.3" data-path="do-while.html">
             
                 <a href="do-while.html">
             
@@ -399,7 +399,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.5" data-path="continue-break.html">
+        <li class="chapter active" data-level="1.7.5" data-path="continue-break.html">
             
                 <a href="continue-break.html">
             
@@ -499,7 +499,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >do...while</a>
+        <a href=".." >continue; break;</a>
     </h1>
 </div>
 
@@ -514,28 +514,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="comandor-de-repeti&#xE7;&#xE3;o-dowhile">Comandor de repeti&#xE7;&#xE3;o: do...while</h1>
-<p>O comando de repeti&#xE7;&#xE3;o <code>do...while</code> funciona da mesma forma do <code>while</code>, por&#xE9;m dessa vez a condi&#xE7;&#xE3;o vem no final, garantindo que o c&#xF3;digo seja executado pelo menos uma vez, mesmo que a condi&#xE7;&#xE3;o seja falta inicialmente, exemplo:</p>
-<pre><code class="lang-php">$i = <span class="hljs-number">0</span>;
+                                <h1 id="comandos-de-repeti&#xE7;&#xE3;o-continue-e-break">Comandos de repeti&#xE7;&#xE3;o: continue e break</h1>
+<p>Com as reservadas <code>continue</code> e <code>break</code> podemos pular ou parar a execu&#xE7;&#xE3;o de qualquer um dos comandos de repeti&#xE7;&#xE3;o mencionados anteriormente, veja o exemplo a seguir:</p>
+<pre><code class="lang-php"><span class="hljs-keyword">for</span> ($i = <span class="hljs-number">0</span>; $i &lt; <span class="hljs-number">10</span>; $i++) {
+    <span class="hljs-keyword">if</span> ($i == <span class="hljs-number">4</span> || $i == <span class="hljs-number">6</span>) {
+        <span class="hljs-keyword">continue</span>;
+    }
 
-<span class="hljs-keyword">do</span> {
-    <span class="hljs-keyword">echo</span> $i . <span class="hljs-string">&apos; &apos;</span>;
+    <span class="hljs-keyword">if</span> ($i == <span class="hljs-number">8</span>) {
+        <span class="hljs-keyword">break</span>;
+    }
 
-    $i++;
-} <span class="hljs-keyword">while</span> ($i &lt; <span class="hljs-number">10</span>);
+    <span class="hljs-keyword">echo</span> $i;
+}
 
-<span class="hljs-comment">// No final exibe:</span>
-<span class="hljs-comment">// 0 1 2 3 4 5 6 7 8 9</span>
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Final&apos;</span>;
 
-$nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
-
-<span class="hljs-keyword">do</span> {
-    <span class="hljs-keyword">echo</span> $nome;
-} <span class="hljs-keyword">while</span> ($nome != <span class="hljs-string">&apos;Alefe&apos;</span>);
-
-<span class="hljs-comment">// No final exibe: Alefe</span>
+<span class="hljs-comment">// No final ser&#xE1; exibido:</span>
+<span class="hljs-comment">// 0 1 2 3 5 7 Final</span>
 </code></pre>
-<p>No segundo exemplo, ele compara se pode repetir somente ap&#xF3;s a execu&#xE7;&#xE3;o do c&#xF3;digo, por isso chega a exibir a mensagem.</p>
+<p>O que aconteceu no exemplo acima &#xE9; que quando o valor de <code>$i</code> for igual a <strong>4</strong> ou <strong>6</strong>, o <code>for</code> ir&#xE1; para a pr&#xF3;xima execu&#xE7;&#xE3;o ignorando tudo depois do <code>continue</code>, como o echo o final do mesmo, j&#xE1; quando o valor de <code>$i</code> for igual a <strong>8</strong> a repeti&#xE7;&#xE3;o ir&#xE1; parar e continuar o c&#xF3;digo fora dela, assim ignorando a repeti&#xE7;&#xE3;o cujo valor de <code>$i</code> seria <strong>9</strong> e o restante do c&#xF3;digo.</p>
+<p>Voc&#xEA; tamb&#xE9;m pode usar essas palavras chaves nos comandos <code>while</code>, <code>do...while</code> e <code>foreach</code>.</p>
 
                                 
                                 </section>
@@ -563,12 +562,12 @@ $nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
 
             
                 
-                <a href="while.html" class="navigation navigation-prev " aria-label="Previous page: while">
+                <a href="foreach.html" class="navigation navigation-prev " aria-label="Previous page: foreach">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="foreach.html" class="navigation navigation-next " aria-label="Next page: foreach">
+                <a href="../html/" class="navigation navigation-next " aria-label="Next page: Uso com HTML">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -579,7 +578,7 @@ $nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"do...while","level":"1.7.3","depth":2,"next":{"title":"foreach","level":"1.7.4","depth":2,"path":"loops/foreach.md","ref":"loops/foreach.md","articles":[]},"previous":{"title":"while","level":"1.7.2","depth":2,"path":"loops/while.md","ref":"loops/while.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises"],"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"loops/do-while.md","mtime":"2018-05-11T02:15:23.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-11T02:36:45.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"continue; break;","level":"1.7.5","depth":2,"next":{"title":"Uso com HTML","level":"1.8","depth":1,"path":"html/README.md","ref":"html/README.md","articles":[]},"previous":{"title":"foreach","level":"1.7.4","depth":2,"path":"loops/foreach.md","ref":"loops/foreach.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises"],"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"loops/continue-break.md","mtime":"2018-05-11T02:32:53.082Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-11T02:36:45.668Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
