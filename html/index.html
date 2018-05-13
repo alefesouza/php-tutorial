@@ -515,6 +515,82 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="uso-com-html">Uso com HTML</h1>
+<p>O das melhores coisas do PHP (ou piores, se usada de maneira errada) &#xE9; poder ser usando em conjunto com c&#xF3;digo HTML, de forma que voc&#xEA; pode colocar condicionais que exibem um c&#xF3;digo HTML ou outro, usar loops para exibir listas, etc.</p>
+<p>Lembra do come&#xE7;o do HTML onde falado que devemos usar o <code>?&gt;</code> apenas quando n&#xE3;o tiver apenas HTML no arquivo? Veja o exemplo a seguir:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span><span class="php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span> <span class="hljs-number">2</span> + <span class="hljs-number">3</span>; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+</code></pre>
+<p>Quando executarmos o arquivo com esse c&#xF3;digo no navegador, ele exibir&#xE1;:</p>
+<p><strong>7</strong></p>
+<p>Isso ocorre porque apenas o c&#xF3;digo dentro de <code>&lt;?php ?&gt;</code> ser&#xE1; processado pelo PHP, o que estiver fora dele ser&#xE1; enviado como HTML normalmente para o navegador, como as tags <code>&lt;b&gt;</code>, que deixam o texto em negrito, junto com o resultado final dos <code>echo</code> que colocamos, exatamente onde colocamos, ou seja, o que o navegador receber&#xE1; ser&#xE1;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+</code></pre>
+<p>Podemos tamb&#xE9;m fazer condicionais e enviar determinado HTML para o navegador dependendo delas:</p>
+<pre><code class="lang-html"><span class="php"><span class="hljs-meta">&lt;?php</span>
+$nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
+
+<span class="hljs-keyword">if</span> ($nome == <span class="hljs-string">&apos;Alefe&apos;</span>) { <span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>O valor de $nome &#xE9; <span class="php"><span class="hljs-meta">&lt;?</span>= $nome; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+<span class="php"><span class="hljs-meta">&lt;?php</span> } <span class="hljs-keyword">else</span> { <span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">i</span>&gt;</span>O valor de $nome n&#xE3;o &#xE9; Alefe, seu valor &#xE9; <span class="php"><span class="hljs-meta">&lt;?</span>= $nome; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+} ?&gt;
+</code></pre>
+<p>Quando executarmos um arquivo com esse c&#xF3;digo no navegador, ele exibir&#xE1;:</p>
+<p><em>O valor de $nome &#xE9; Alefe</em></p>
+<p>Note que abrimos e fechamos v&#xE1;rias vezes o <code>&lt;?php ?&gt;</code> para dizer que &#xE9; uma continua&#xE7;&#xE3;o, h&#xE1; tamb&#xE9;m a shorttag <code>&lt;?= $variavel; ?&gt;</code>, que &#xE9; apenas uma simplifica&#xE7;&#xE3;o de <code>&lt;?php echo $variavel; ?&gt;</code>, ou seja, serve apenas para exibir algum valor na tela.</p>
+<p>Caso o valor de $nome fosse outro, como por exemplo Rasmus, a sa&#xED;da seria:</p>
+<p><em>O valor de $nome n&#xE3;o &#xE9; Alefe, seu valor &#xE9; Rasmus</em></p>
+<p>Podemos fazer o mesmo com loops por exemplo, veja o exemplo a seguir:</p>
+<pre><code class="lang-html"><span class="php"><span class="hljs-meta">&lt;?php</span>
+$nomes = [<span class="hljs-string">&apos;Alefe&apos;</span>, <span class="hljs-string">&apos;Ada&apos;</span>, <span class="hljs-string">&apos;Charles&apos;</span>];
+<span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+<span class="php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">foreach</span>($nomes <span class="hljs-keyword">as</span> $nome) { <span class="hljs-meta">?&gt;</span></span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="php"><span class="hljs-meta">&lt;?</span>= $nome; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="php"><span class="hljs-meta">&lt;?php</span> } <span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>O c&#xF3;digo enviado HTML para o navegador ser&#xE1;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Alefe<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ada<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Charles<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+</code></pre>
+<p>Que exibir&#xE1; um lista igual a seguir:</p>
+<ul>
+<li>Alefe</li>
+<li>Ada</li>
+<li>Charles</li>
+</ul>
+<p>Embora pare&#xE7;a muito legal, n&#xE3;o &#xE9; uma boa pr&#xE1;tica deixar l&#xF3;gica e HTML no mesmo arquivo, pois conforme o projeto cresce, pode deixar o c&#xF3;digo feio e confuso, houve uma &#xE9;poca que isso era muito comum e acabou deixando o PHP com uma certa m&#xE1; fama por ser comum misturar todo o c&#xF3;digo em um &#xFA;nico arquivo.</p>
+<p>Assim como em qualquer outra linguagem de back-end, o ideal seria utilizar algum framework para gerenciar melhor o c&#xF3;digo PHP (controller) e o HTML (view), mas como o foco desse tutorial &#xE9; apenas dar uma introdu&#xE7;&#xE3;o, no momento o melhor que podemos fazer seria deixar todo o c&#xF3;digo PHP em um arquivo e o c&#xF3;digo HTML em outro, apenas exibindo o valor das vari&#xE1;veis, caso voc&#xEA; tenha mais interesse na linguagem, recomendo estudar algum framework PHP, existem v&#xE1;rios, como Zend, Symfony, CakePHP, e o meu favorito e tamb&#xE9;m um dos principais atualmente &#xE9; o <a href="http://laravel.com" target="_blank">Laravel</a>.</p>
+<p>Continuando o tutorial, existe a fun&#xE7;&#xE3;o global <code>include</code>, no qual voc&#xEA; adicionar todo o c&#xF3;digo de um arquivo PHP em outro, veremos um separa&#xE7;&#xE3;o e l&#xF3;gica e HTML no exemplo a seguir:</p>
+<pre><code class="lang-php"><span class="hljs-comment">// arquivo index.php</span>
+<span class="hljs-meta">&lt;?php</span>
+
+$dados = [
+    <span class="hljs-string">&apos;nome&apos;</span> =&gt; <span class="hljs-string">&apos;Alefe&apos;</span>,
+    <span class="hljs-string">&apos;sobrenome&apos;</span> =&gt; <span class="hljs-string">&apos;Souza&apos;</span>,
+    <span class="hljs-string">&apos;idade&apos;</span> =&gt; <span class="hljs-number">21</span>
+];
+
+<span class="hljs-keyword">include</span>(<span class="hljs-string">&apos;views/index.php&apos;</span>);
+</code></pre>
+<p>Agora o c&#xF3;digo do arquivo index.php dentro da pasta views:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- views/index.php --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Nome:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> <span class="php"><span class="hljs-meta">&lt;?</span>= $dados[<span class="hljs-string">&apos;nome&apos;</span>]; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Sobrenome:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> <span class="php"><span class="hljs-meta">&lt;?</span>= $dados[<span class="hljs-string">&apos;sobrenome&apos;</span>]; <span class="hljs-meta">?&gt;</span></span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Idade:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> <span class="php"><span class="hljs-meta">&lt;?</span>= $dados[<span class="hljs-string">&apos;idade&apos;</span>]; <span class="hljs-meta">?&gt;</span></span> anos<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>O c&#xF3;digo enviado HTML para o navegador ser&#xE1;:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Nome:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> Alefe<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Sobrenome:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> Souza<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Idade:<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span> 21 anos<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+<p>Que exibir&#xE1; o seguinte no navegador:</p>
+<p><strong>Nome:</strong> Alefe</p>
+<p><strong>Sobrenome:</strong> Souza</p>
+<p><strong>Idade:</strong> 21 anos</p>
 
                                 
                                 </section>
@@ -558,7 +634,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Uso com HTML","level":"1.8","depth":1,"next":{"title":"Banco de dados","level":"1.9","depth":1,"path":"database/README.md","ref":"database/README.md","articles":[]},"previous":{"title":"continue; break;","level":"1.7.5","depth":2,"path":"loops/continue-break.md","ref":"loops/continue-break.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises"],"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html/README.md","mtime":"2018-05-11T01:55:53.136Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-11T02:36:45.668Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Uso com HTML","level":"1.8","depth":1,"next":{"title":"Banco de dados","level":"1.9","depth":1,"path":"database/README.md","ref":"database/README.md","articles":[]},"previous":{"title":"continue; break;","level":"1.7.5","depth":2,"path":"loops/continue-break.md","ref":"loops/continue-break.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"html/README.md","mtime":"2018-05-13T22:15:57.093Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-13T22:11:44.211Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -583,6 +659,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
