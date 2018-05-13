@@ -16,6 +16,4 @@ Porém uma grande vantagem do PHP é ser altamente flexível, podendo rodar em p
 * WordPress, usado em aproximamente 30% dos websites, principalmente em blog e sites de notícias.
 * Wikipedia, mais precisamente o MediaWiki, usando por praticamente todos os websites no formato Wiki.
 
-Também é utilizando em muitos sites de e-commerce, através do Magento, OpenCart e PrestaShop.
-
-Aqui nesse workshop abordaremos somente o básico de PHP, por não possuirmos muito tempo, mas caso você venha a ter mais interesse na linguagem, recomendo estudar algum framework PHP, existem vários, como Zend, Symfony, CakePHP, e o meu favorito e também um dos principais atualmente é o [Laravel](http://laravel.com).
+Também é utilizando em muitos sites de e-commerce, através do Magento, OpenCart, PrestaShop, etc.
