@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>if · GitBook</title>
+        <title>Formulários · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="switch.html" />
+    <link rel="next" href="../oop/" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="../database/pdo.html" />
     
 
     </head>
@@ -198,9 +198,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../conditionals/">
             
-                <a href="./">
+                <a href="../conditionals/">
             
                     
                     Condicionais
@@ -212,9 +212,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="if.html">
+        <li class="chapter " data-level="1.4.1" data-path="../conditionals/if.html">
             
-                <a href="if.html">
+                <a href="../conditionals/if.html">
             
                     
                     if
@@ -225,9 +225,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="switch.html">
+        <li class="chapter " data-level="1.4.2" data-path="../conditionals/switch.html">
             
-                <a href="switch.html">
+                <a href="../conditionals/switch.html">
             
                     
                     switch
@@ -475,9 +475,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10" data-path="../forms/">
+        <li class="chapter active" data-level="1.10" data-path="./">
             
-                <a href="../forms/">
+                <a href="./">
             
                     
                     Formulários
@@ -544,7 +544,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >if</a>
+        <a href=".." >Formulários</a>
     </h1>
 </div>
 
@@ -559,69 +559,88 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="condicionais-if">Condicionais: if</h1>
-<p>Com o comando if (se) podemos fazer compara&#xE7;&#xF5;es, executando um c&#xF3;digo se determinada condi&#xE7;&#xE3;o for verdadeira e, caso queira, adicionar mais condi&#xE7;&#xF5;es que podem executar outros c&#xF3;digos caso a primeira condi&#xE7;&#xE3;o n&#xE3;o for verdadeira, e por fim executar outro c&#xF3;digo caso n&#xE3;o passe em nenhuma das condi&#xE7;&#xF5;es anteriores, observe os exemplos a seguir:</p>
-<pre><code class="lang-php">$nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
+                                <h1 id="formul&#xE1;rios">Formul&#xE1;rios</h1>
+<p>Uma das principais funcionalidades de uma linguagem back-end &#xE9; manipular dados de formul&#xE1;rios, salvando os dados do mesmo em um banco de dados.</p>
+<p>Veja o exemplo a seguir de um formul&#xE1;rio em HTML, no qual salvamos os dados no banco de dados utilizando um arquivo PHP:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- formulario.html ou formulario.php --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;POST&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;salvar.php&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Nome:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nome&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 
-<span class="hljs-keyword">if</span> ($nome == <span class="hljs-string">&apos;Alefe&apos;</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;O valor da vari&#xE1;vel $nome &#xE9; Alefe&apos;</span>;
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;O valor da vari&#xE1;vel $nome n&#xE3;o &#xE9; Alefe&apos;</span>;
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Sobrenome:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;sobrenome&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Idade:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;idade&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Enviar&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>Existem dois m&#xE9;todos de formul&#xE1;rios, o GET e o POST, o primeiro exibe as informa&#xE7;&#xF5;es na url, &#xF3;timo para buscas, j&#xE1; o segundo n&#xE3;o exibe as informa&#xE7;&#xF5;es, &#xF3;timo para login e inser&#xE7;&#xE3;o de dados.</p>
+<p>Ao clicar no bot&#xE3;o enviar, o navegador enviar os dados inseridos no formul&#xE1;rio para o arquivo salvar.php, no qual voc&#xEA; por acessar com a <a href="http://php.net/manual/pt_BR/language.variables.superglobals.php" target="_blank">vari&#xE1;vel superglobal</a> <code>$_POST</code> caso voc&#xEA; tenha utilizado o m&#xE9;todo POST, e a superglobal <code>$_GET</code> caso voc&#xEA; tenha utilizando o m&#xE9;todo GET, as mesma s&#xE3;o um array chave-valor, cujo as chaves s&#xE3;o os name=&quot;&quot; do formul&#xE1;rios, e o valor os valores inseridos pelo usu&#xE1;rios, veja o arquivo salvar.php a seguir:</p>
+<pre><code class="lang-php"><span class="hljs-comment">// salvar.php</span>
+$conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&apos;mysql:host=localhost;dbname=php_tutorial;charset=utf8&apos;</span>, <span class="hljs-string">&apos;root&apos;</span>, <span class="hljs-string">&apos;&apos;</span>);
+
+$query = $conexao-&gt;prepare(<span class="hljs-string">&apos;INSERT INTO tabela_teste (nome, sobrenome, idade) VALUES (:nome, :sobrenome, :idade)&apos;</span>);
+
+$query-&gt;bindValue(<span class="hljs-string">&apos;:nome&apos;</span>, $_POST[<span class="hljs-string">&apos;nome&apos;</span>], PDO::PARAM_STR);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, $_POST[<span class="hljs-string">&apos;sobrenome&apos;</span>], PDO::PARAM_STR);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:idade&apos;</span>, $_POST[<span class="hljs-string">&apos;idade&apos;</span>], PDO::PARAM_INT);
+
+$query-&gt;execute();
+
+<span class="hljs-keyword">echo</span> $_POST[<span class="hljs-string">&apos;nome&apos;</span>]. <span class="hljs-string">&apos; &apos;</span> . $_POST[<span class="hljs-string">&apos;sobrenome&apos;</span>] . <span class="hljs-string">&apos; foi cadastrado com sucesso&apos;</span>;
+</code></pre>
+<p>Note os $_POST, eles possuem os mesmos name=&quot;&quot; do formul&#xE1;rio, mas aten&#xE7;&#xE3;o, s&#xE3;o os name=&quot;&quot;, n&#xE3;o os id=&quot;&quot;, eles v&#xE3;o possuir os valores inseridos pelo usu&#xE1;rio, veja o formul&#xE1;rio preenchido:</p>
+<p><img src="assets/form1.png" alt="Formul&#xE1;rio de cadastro preenchido"></p>
+<p>Ao clicarmos em Enviar, a p&#xE1;gina a seguir ser&#xE1; exibida:</p>
+<p><img src="assets/form2.png" alt="P&#xE1;gina com o resultado da submiss&#xE3;o"></p>
+<p>Nosso phpMyAdmin ficar&#xE1; assim:</p>
+<p><img src="assets/form3.png" alt="phpMyAdmin com o novo resultado"></p>
+<p>E a nossa p&#xE1;gina teste.php da p&#xE1;gina sobre o PDO ficar&#xE1; assim:</p>
+<p><img src="assets/form4.png" alt="P&#xE1;gina teste.php com o novo resultado"></p>
+<p>Lembre-se que esse &#xE9; apenas um tutorial para iniciantes, cabe a voc&#xEA; procurar por formas melhores de valida&#xE7;&#xE3;o e inser&#xE7;&#xE3;o de dados, como disse antes, normalmente os frameworks te fornecem maneiras bem f&#xE1;ceis de fazer isso.</p>
+<h2 id="met&#xF3;do-get">Met&#xF3;do GET</h2>
+<p>O met&#xF3;do GET &#xE9; ideal para buscas, com ele voc&#xEA; pode ter chave-valor pela URL da p&#xE1;gina, a chamada query string, veja o exemplo a seguir:</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- formulario2.html ou formulario2.php --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;GET&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;busca.php&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nome&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Nome&quot;</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Buscar&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>C&#xF3;digo PHP que far&#xE1; a busca:</p>
+<pre><code class="lang-php"><span class="hljs-comment">// busca.php</span>
+$conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&apos;mysql:host=localhost;dbname=php_tutorial;charset=utf8&apos;</span>, <span class="hljs-string">&apos;root&apos;</span>, <span class="hljs-string">&apos;&apos;</span>);
+
+$query = $conexao-&gt;prepare(<span class="hljs-string">&apos;SELECT * FROM tabela_teste WHERE nome LIKE :busca&apos;</span>);
+
+$query-&gt;bindValue(<span class="hljs-string">&apos;:busca&apos;</span>, <span class="hljs-string">&apos;%&apos;</span> . $_GET[<span class="hljs-string">&apos;nome&apos;</span>] . <span class="hljs-string">&apos;%&apos;</span>, PDO::PARAM_STR);
+
+$query-&gt;execute();
+
+<span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;&lt;p&gt;Resultados de &apos;</span> . $_GET[<span class="hljs-string">&apos;nome&apos;</span>] . <span class="hljs-string">&apos;&lt;/p&gt;&apos;</span>;
+
+<span class="hljs-keyword">while</span> ($linha = $query-&gt;fetch(PDO::FETCH_ASSOC)) {
+    <span class="hljs-keyword">echo</span> $linha[<span class="hljs-string">&apos;nome&apos;</span>] . <span class="hljs-string">&apos; &apos;</span> . $linha[<span class="hljs-string">&apos;sobrenome&apos;</span>] . <span class="hljs-string">&apos;, &apos;</span> . $linha[<span class="hljs-string">&apos;idade&apos;</span>] . <span class="hljs-string">&apos; anos&apos;</span> . <span class="hljs-string">&apos;&lt;br&gt;&apos;</span>;
 }
 </code></pre>
-<p>Note que usamos o comparador == para verificar o valor da vari&#xE1;vel $nome, que se caso for igual a &apos;Alefe&apos;, executar&#xE1; o primeiro bloco de c&#xF3;digo, sen&#xE3;o (else) executar&#xE1; o segundo.</p>
-<p>Podemos tamb&#xE9;m fazer compara&#xE7;&#xF5;es com n&#xFA;meros:</p>
-<pre><code class="lang-php">$numero = <span class="hljs-number">5</span>;
-
-<span class="hljs-keyword">if</span> ($numero &gt; <span class="hljs-number">10</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior que 10&apos;</span>;
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &gt; <span class="hljs-number">7</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior que 7&apos;</span>;
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &gt;= <span class="hljs-number">5</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior ou igual a 5&apos;</span>; <span class="hljs-comment">// esse c&#xF3;digo ser&#xE1; executado</span>
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &gt;= <span class="hljs-number">3</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior ou igual a tr&#xEA;s&apos;</span>;
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero possui um valor diferente das condicionais anteriores&apos;</span>;
-}
-</code></pre>
-<p>Note que apenas a terceira condi&#xE7;&#xE3;o ser&#xE1; executada, pois ela possui um valor maior ou igual a 5 e &#xE9; a primeira a ser verdadeira, pois n&#xE3;o passa em nenhuma das condi&#xE7;&#xF5;es anteriores, por&#xE9;m as condi&#xE7;&#xF5;es seguintes, como a que compara se a vari&#xE1;vel $numero &#xE9; maior ou igual a 3, n&#xE3;o ser&#xE3;o executadas por estarem no mesmo else if, apenas uma condi&#xE7;&#xE3;o pode ser executada em um if com v&#xE1;rias condi&#xE7;&#xF5;es, mas voc&#xEA; pode iniciar novas condicionais normalmente, bastando apenas n&#xE3;o colocar &quot;else&quot; antes do comando &quot;if&quot;, no pr&#xF3;ximo c&#xF3;digo h&#xE1; um exemplo.</p>
-<p>Existem outras condicionais, para comparar se um n&#xFA;mero &#xE9; menor que outro ou se determinado valor &#xE9; diferente, por exemplo:</p>
-<pre><code class="lang-php">$numero = <span class="hljs-number">-5</span>;
-
-<span class="hljs-keyword">if</span> ($numero &gt; <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; um n&#xFA;mero positivo&apos;</span>;
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero &lt; <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; um n&#xFA;mero negativo&apos;</span>; <span class="hljs-comment">// Ser&#xE1; exibido na tela</span>
-} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ($numero == <span class="hljs-number">0</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; igual a 0&apos;</span>;
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero n&#xE3;o &#xE9; um n&#xFA;mero&apos;</span>;
-}
-
-<span class="hljs-keyword">if</span> ($numero != <span class="hljs-number">5</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; diferente de 5&apos;</span>; <span class="hljs-comment">// Ser&#xE1; exibido na tela</span>
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; igual a 5;
-}
-</span></code></pre>
-<h2 id="m&#xFA;ltiplas-condi&#xE7;&#xF5;es">M&#xFA;ltiplas condi&#xE7;&#xF5;es</h2>
-<p>Assim como outras linguagens de programa&#xE7;&#xE3;o podemos realizar m&#xFA;ltiplas condi&#xE7;&#xF5;es, no c&#xF3;digo a seguir, todos os blocos ser&#xE3;o executados:</p>
-<pre><code class="lang-php">$numero = <span class="hljs-number">5</span>;
-$nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
-
-<span class="hljs-keyword">if</span> ($numero &gt;= <span class="hljs-number">3</span> &amp;&amp; $numero &lt;= <span class="hljs-number">7</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; maior ou igual a 3 e menor ou igual a 7&apos;</span>;
-}
-
-<span class="hljs-keyword">if</span> ($numero == <span class="hljs-number">5</span> || $numero == <span class="hljs-number">3</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; igual a 5 ou igual a 3&apos;</span>;
-}
-
-<span class="hljs-keyword">if</span> ($numero != <span class="hljs-number">7</span> &amp;&amp; $nome == <span class="hljs-string">&apos;Alefe&apos;</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A vari&#xE1;vel $numero &#xE9; diferente de 7 e a vari&#xE1;vel $nome &#xE9; igual a &quot;Alefe&quot;&apos;</span>;
-}
-</code></pre>
+<p>O comando <code>LIKE</code> &#xE9; usado normalmente para buscas, note que fazemos uma concatena&#xE7;&#xE3;o no <code>bindValue</code> com % no in&#xED;cio e no final, isso significa que queremos resultados que possuam em qualquer parte o valor de <code>$_GET[&apos;nome&apos;]</code>, caso tiver % apenas no in&#xED;cio, significaria que queririamos apenas o que termina com o valor de <code>$_GET[&apos;nome&apos;]</code>, e se estivesse com % apenas no ficaria, queririamos apenas o que come&#xE7;a com esse valor.</p>
+<p>Agora no navegador, nosso formul&#xE1;rio ficar&#xE1; assim:</p>
+<p><img src="assets/form5.png" alt="Formul&#xE1;rio de busca"></p>
+<p>Ao clicar em Buscar, ir&#xE1; para essa p&#xE1;gina:</p>
+<p><img src="assets/form6.png" alt="Resultado de lef"></p>
+<p>Note o <code>?nome=lef</code> na URL, isso n&#xE3;o ocorre quando o formul&#xE1;rio &#xE9; do tipo post, nesse caso, <code>?nome=</code> &#xE9; o <code>name=&quot;&quot;</code> do campo de texto do nosso exemplo.</p>
+<p>Note tamb&#xE9;m que ele retornou o resultado cujo o campo nome do banco de dados possui &quot;lef&quot;, por causa do % explicado anteriormente, podendo mudar manualmente o <code>?nome=</code> na URL tamb&#xE9;m para realizar outra busca:</p>
+<p><img src="assets/form7.png" alt="Resultado de Ti"></p>
+<p>Ou uma busca sem resultados:</p>
+<p><img src="assets/form8.png" alt="Resultado de busca sem resultados"></p>
 
                                 
                                 </section>
@@ -649,12 +668,12 @@ $nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Condicionais">
+                <a href="../database/pdo.html" class="navigation navigation-prev " aria-label="Previous page: PDO">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="switch.html" class="navigation navigation-next " aria-label="Next page: switch">
+                <a href="../oop/" class="navigation navigation-next " aria-label="Next page: Orientação a objetos">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -665,7 +684,7 @@ $nome = <span class="hljs-string">&apos;Alefe&apos;</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"if","level":"1.4.1","depth":2,"next":{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]},"previous":{"title":"Condicionais","level":"1.4","depth":1,"path":"conditionals/README.md","ref":"conditionals/README.md","articles":[{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conditionals/if.md","mtime":"2018-05-14T02:18:14.734Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Formulários","level":"1.10","depth":1,"next":{"title":"Orientação a objetos","level":"1.11","depth":1,"path":"oop/README.md","ref":"oop/README.md","articles":[]},"previous":{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"forms/README.md","mtime":"2018-05-14T03:22:36.329Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
