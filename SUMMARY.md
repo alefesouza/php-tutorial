@@ -28,5 +28,6 @@
 * [Banco de dados](database/README.md)
   * [phpMyAdmin](database/phpmyadmin.md)
   * [PDO](database/pdo.md)
+* [Formulários](forms/README.md)
 * [Orientação a objetos](oop/README.md)
 * [Sobre o autor](about/README.md)
