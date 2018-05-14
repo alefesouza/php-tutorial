@@ -26,5 +26,7 @@
   * [continue; break;](loops/continue-break.md)
 * [Uso com HTML](html/README.md)
 * [Banco de dados](database/README.md)
+  * [phpMyAdmin](database/phpmyadmin.md)
+  * [PDO](database/pdo.md)
 * [Orientação a objetos](oop/README.md)
 * [Sobre o autor](about/README.md)

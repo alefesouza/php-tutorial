@@ -6,7 +6,7 @@ O objetivo desse tutorial é dar uma introdução a linguagem PHP para quem sabe
 
 Escrevi esse tutorial com o intuito de ser o mais simples e objetivo possível, com uma escrita meio informal com minhas próprias palavras.
 
-Por ser um workshop para iniciantes de apenas 2 horas, eu não irei entrar detalhes mais avançados de orientação a objetos, PDO, Composer ou algum framework, ensinarei aquele PHP básico por onde praticamente todo mundo começa, estruturado usando mysqli.
+Por ser um workshop para iniciantes de apenas 2 horas, eu não irei entrar detalhes mais avançados de orientação a objetos, Composer ou algum framework.
 
 Caso você queira se aprofundar mais:
 
