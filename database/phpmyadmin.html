@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Condicionais · GitBook</title>
+        <title>phpMyAdmin · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="if.html" />
+    <link rel="next" href="pdo.html" />
     
     
-    <link rel="prev" href="../variables/strings.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -198,9 +198,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../conditionals/">
             
-                <a href="./">
+                <a href="../conditionals/">
             
                     
                     Condicionais
@@ -212,9 +212,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="if.html">
+        <li class="chapter " data-level="1.4.1" data-path="../conditionals/if.html">
             
-                <a href="if.html">
+                <a href="../conditionals/if.html">
             
                     
                     if
@@ -225,9 +225,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="switch.html">
+        <li class="chapter " data-level="1.4.2" data-path="../conditionals/switch.html">
             
-                <a href="switch.html">
+                <a href="../conditionals/switch.html">
             
                     
                     switch
@@ -430,9 +430,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../database/">
+        <li class="chapter " data-level="1.9" data-path="./">
             
-                <a href="../database/">
+                <a href="./">
             
                     
                     Banco de dados
@@ -444,9 +444,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../database/phpmyadmin.html">
+        <li class="chapter active" data-level="1.9.1" data-path="phpmyadmin.html">
             
-                <a href="../database/phpmyadmin.html">
+                <a href="phpmyadmin.html">
             
                     
                     phpMyAdmin
@@ -457,9 +457,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.2" data-path="../database/pdo.html">
+        <li class="chapter " data-level="1.9.2" data-path="pdo.html">
             
-                <a href="../database/pdo.html">
+                <a href="pdo.html">
             
                     
                     PDO
@@ -531,7 +531,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Condicionais</a>
+        <a href=".." >phpMyAdmin</a>
     </h1>
 </div>
 
@@ -546,19 +546,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="condicionais">Condicionais</h1>
-<p>Nas linguagens de programa&#xE7;&#xE3;o &#xE9; muito comum usarmos condicionais, que s&#xE3;o blocos de c&#xF3;digo que ser&#xE3;o executados se determinada condi&#xE7;&#xE3;o for verdadeira, por exemplo:</p>
-<pre><code class="lang-php">$var1 = <span class="hljs-number">3</span>;
-$var2 = <span class="hljs-number">2</span>;
-
-<span class="hljs-keyword">if</span> ($var1 + $var2 == <span class="hljs-number">5</span>) {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$var1 + $var2 &#xE9; igual a 5&quot;</span>; <span class="hljs-comment">// Exibe na tela: 3 + 2 &#xE9; igual a 5</span>
-} <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;$var1 + $var2 n&#xE3;o &#xE9; igual a 5 (?)&quot;</span>;
-}
-</code></pre>
-<p>Nesse caso a segunda condi&#xE7;&#xE3;o nunca ser&#xE1; executada, pois o valor da vari&#xE1;vel $var1 somado com o valor da $var2 &#xE9; 5.</p>
-<p>Detalhes como o else e condicionais mais avan&#xE7;adas ser&#xE3;o abordadas na pr&#xF3;xima p&#xE1;gina.</p>
+                                <h1 id="phpmyadmin">phpMyAdmin</h1>
+<p>O phpMyAdmin &#xE9; um &#xF3;timo painel escrito em PHP para voc&#xEA; checar os dados de bancos de dados MySQL existentes e criar novos dados, ele &#xE9; &#xF3;timos para utilizarmos enquanto estamos desenvolvendo.</p>
+<p>Caso voc&#xEA; tenha instalado o XAMPP com as op&#xE7;&#xF5;es que deixei no screenshot a seguir:</p>
+<p><img src="../php/assets/getting-started/xampp2.png" alt="Tela de sele&#xE7;&#xE3;o de componentes do XAMPP"></p>
+<p>Voc&#xEA; conseguir&#xE1; acess&#xE1;-lo no endere&#xE7;o <a href="http://localhost/phpmyadmin" target="_blank">http://localhost/phpmyadmin</a>, o username padr&#xE3;o &#xE9; &quot;root&quot;, o campo senha voc&#xEA; pode deixar vazio, como na imagem a seguir:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin1.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Caso tenha ocorrido tudo certo, voc&#xEA; ir&#xE1; estar em uma tela igual essa:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin2.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Para come&#xE7;ar, precisamos criar um banco de dados, para isso, clique em New na lateral esquerda, voc&#xEA; ir&#xE1; estar em uma tela igual essa:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin3.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Ali no campo de texto abaixo de <em>Create database</em>, digite <em>php_tutorial</em>, esse ser&#xE1; o nome do nosso banco de dados, e clique em create, voc&#xEA; ir&#xE1; cair em uma tela igual essa:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin4.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Agora criaremos uma tabela, ali no primeira campo de texto, coloque <em>tabela_teste</em>, o n&#xFA;mero de colunas pode ser 4 mesmo, ent&#xE3;o clique em Go, voc&#xEA; ir&#xE1; cair uma tela igual a seguir, preencha com os seguintes dados:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin5.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Assim dizemos que criaremos uma coluna chamada <em>id</em> do <em>int</em>, ou seja, ela receber&#xE1; apenas n&#xFA;meros inteiros (<strong>int</strong>egers), marcaremos tamb&#xE9;m o checkbox <em>A_I</em>, <em>auto increment</em>, isso significa que n&#xE3;o precisamos preench&#xEA;-lo manualmente, pois a cada novo registro ele aumentar&#xE1; em 1 automaticamente nunca se repetindo, isso tamb&#xE9;m marcar&#xE1; o &#xED;ndice PRIMARY, indicando ser a chave prim&#xE1;ria do banco.</p>
+<p>Tamb&#xE9;m criaremos uma coluna <em>nome</em> e <em>outra</em> sobrenome, do tipo VARCHAR (aceita qualquer caractere) com limite de 255 caracteres, e outra coluna chamada <em>idade</em>, que tamb&#xE9;m receber&#xE1; apenas n&#xFA;meros inteiros.</p>
+<p>Ap&#xF3;s isso, clique em Save, voc&#xEA; ir&#xE1; chegar em uma tela igual a seguinte, mostrando os dados da estrutura da tabela:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin6.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Voc&#xEA; pode inserir dados pelo pr&#xF3;prio phpMyAdmin, clique em Inserir no menu superior, e preencha os dados, deixando o campo <em>id</em> vazio pois ser&#xE1; preenchido automaticamente:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin7.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Clique em Go e depois em Browse no menu seperior, voc&#xEA; estar&#xE1; em uma tela igual a seguinte:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin8.png" alt="Tela de login do phpMyAdmin"></p>
+<p>Podemos criar, acessar, atualizar e excluir dados, o famoso CRUD (<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, <strong>D</strong>elete) pelo PHP, o que aprenderemos na p&#xE1;gina seguinte.</p>
 
                                 
                                 </section>
@@ -586,12 +596,12 @@ $var2 = <span class="hljs-number">2</span>;
 
             
                 
-                <a href="../variables/strings.html" class="navigation navigation-prev " aria-label="Previous page: Strings">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Banco de dados">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="if.html" class="navigation navigation-next " aria-label="Next page: if">
+                <a href="pdo.html" class="navigation navigation-next " aria-label="Next page: PDO">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -602,7 +612,7 @@ $var2 = <span class="hljs-number">2</span>;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Condicionais","level":"1.4","depth":1,"next":{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},"previous":{"title":"Strings","level":"1.3.2","depth":2,"path":"variables/strings.md","ref":"variables/strings.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"conditionals/README.md","mtime":"2018-05-13T22:31:19.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T01:46:26.746Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"next":{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]},"previous":{"title":"Banco de dados","level":"1.9","depth":1,"path":"database/README.md","ref":"database/README.md","articles":[{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"database/phpmyadmin.md","mtime":"2018-05-14T00:30:16.139Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T01:46:26.746Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
