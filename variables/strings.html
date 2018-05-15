@@ -1,14 +1,14 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="pt-br" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Strings · GitBook</title>
+        <title>Strings · Introdução a linguagem PHP</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
         
         
     
@@ -75,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="Escreva para pesquisar" />
 </div>
 
             
@@ -86,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/php-tutorial" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -521,7 +530,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            Publicado com GitBook
         </a>
     </li>
 </ul>
@@ -559,8 +568,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="strings">Strings</h1>
-<p>Voc&#xEA; tamb&#xE9;m pode armazenar strings (textos) em vari&#xE1;veis e concaten&#xE1;-las (juntar) para formar uma nome string, para isso basta declarar a vari&#xE1;vel colocando entre aspas duplas ou aspas simples, como por exemplo:</p>
+                                <h1 id="vari&#xE1;veis-strings">Vari&#xE1;veis: Strings</h1>
+<p>Voc&#xEA; tamb&#xE9;m pode armazenar strings (textos) em vari&#xE1;veis e concaten&#xE1;-las (juntar) para formar uma outra string, para isso basta declarar a vari&#xE1;vel colocando entre aspas duplas ou aspas simples, como por exemplo:</p>
 <pre><code class="lang-php">$nome = <span class="hljs-string">&quot;Alefe&quot;</span>;
 $sobrenome = <span class="hljs-string">&apos;Souza&apos;</span>;
 $numero = <span class="hljs-number">5</span>;
@@ -569,7 +578,7 @@ $numero = <span class="hljs-number">5</span>;
 <span class="hljs-keyword">echo</span> $nome.$numero; <span class="hljs-comment">// Alefe5</span>
 <span class="hljs-keyword">echo</span> $nome . <span class="hljs-string">&apos; &apos;</span> . $sobrenome; <span class="hljs-comment">// Alefe Souza</span>
 </code></pre>
-<p>Note que diferente da maioria das linguagem, no PHP se utiliza o . (ponto) para fazer a concatena&#xE7;&#xE3;o de strings, ao inv&#xE9;s do +.</p>
+<p>Note que diferente da maioria das linguagem, no PHP se utiliza o <code>.</code> (ponto) para fazer a concatena&#xE7;&#xE3;o de strings, ao inv&#xE9;s do <code>+</code>.</p>
 <h2 id="a-diferen&#xE7;a-de-aspas-simples-e-duplas">A diferen&#xE7;a de aspas simples e duplas:</h2>
 <pre><code class="lang-php">$aspasDuplas = <span class="hljs-string">&quot;$nome $sobrenome&quot;</span>;
 $aspasSimples = <span class="hljs-string">&apos;$nome $sobrenome&apos;</span>;
@@ -579,7 +588,7 @@ $aspasSimplesConcatenando = $nome . <span class="hljs-string">&apos; &apos;</spa
 <span class="hljs-keyword">echo</span> $aspasSimples; <span class="hljs-comment">// $nome $sobrenome</span>
 <span class="hljs-keyword">echo</span> $aspasSimplesConcatenando; <span class="hljs-comment">// Alefe Souza</span>
 </code></pre>
-<p>Quando voc&#xEA; utiliza aspas duplas, voc&#xEA; pode adicionar vari&#xE1;veis normalmente dentro do texto, no final essas vari&#xE1;veis ser&#xE3;o substitu&#xED;das pelo valor delas, isso n&#xE3;o acontece quando declaramos com aspas simples, pode at&#xE9; parecer legal usar aspas duplas, por&#xE9;m o PHP precisa checar em toda declara&#xE7;&#xE3;o com aspas duplas se existe uma vari&#xE1;vel dentro, o que acaba perdendo um pouco em perfomance (&quot;velocidade&quot;), sendo recomendado sempre declarar strings com aspas simples.</p>
+<p>Quando voc&#xEA; utiliza aspas duplas, voc&#xEA; pode adicionar vari&#xE1;veis normalmente dentro do texto, no final essas vari&#xE1;veis ser&#xE3;o substitu&#xED;das pelo valor delas, isso n&#xE3;o acontece quando declaramos com aspas simples, pode at&#xE9; parecer legal usar aspas duplas, por&#xE9;m o PHP precisa checar em toda declara&#xE7;&#xE3;o com aspas duplas se existe alguma vari&#xE1;vel dentro, o que acaba perdendo um pouco em perfomance (&quot;velocidade&quot;), sendo recomendado sempre declarar strings com aspas simples.</p>
 
                                 
                                 </section>
@@ -623,7 +632,7 @@ $aspasSimplesConcatenando = $nome . <span class="hljs-string">&apos; &apos;</spa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Strings","level":"1.3.2","depth":2,"next":{"title":"Condicionais","level":"1.4","depth":1,"path":"conditionals/README.md","ref":"conditionals/README.md","articles":[{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]}]},"previous":{"title":"Números","level":"1.3.1","depth":2,"path":"variables/numbers.md","ref":"variables/numbers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"variables/strings.md","mtime":"2018-05-14T02:18:14.796Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Strings","level":"1.3.2","depth":2,"next":{"title":"Condicionais","level":"1.4","depth":1,"path":"conditionals/README.md","ref":"conditionals/README.md","articles":[{"title":"if","level":"1.4.1","depth":2,"path":"conditionals/if.md","ref":"conditionals/if.md","articles":[]},{"title":"switch","level":"1.4.2","depth":2,"path":"conditionals/switch.md","ref":"conditionals/switch.md","articles":[]}]},"previous":{"title":"Números","level":"1.3.1","depth":2,"path":"variables/numbers.md","ref":"variables/numbers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"variables/strings.md","mtime":"2018-05-15T02:46:58.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T02:47:27.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -648,10 +657,6 @@ $aspasSimplesConcatenando = $nome . <span class="hljs-string">&apos; &apos;</spa
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

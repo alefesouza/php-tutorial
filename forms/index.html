@@ -1,14 +1,14 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="pt-br" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Formulários · GitBook</title>
+        <title>Formulários · Introdução a linguagem PHP</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
         
         
     
@@ -75,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="Escreva para pesquisar" />
 </div>
 
             
@@ -86,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/php-tutorial" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -521,7 +530,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            Publicado com GitBook
         </a>
     </li>
 </ul>
@@ -583,21 +592,21 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
 </code></pre>
 <p>Existem dois m&#xE9;todos de formul&#xE1;rios, o GET e o POST, o primeiro exibe as informa&#xE7;&#xF5;es na url, &#xF3;timo para buscas, j&#xE1; o segundo n&#xE3;o exibe as informa&#xE7;&#xF5;es, &#xF3;timo para login e inser&#xE7;&#xE3;o de dados.</p>
-<p>Ao clicar no bot&#xE3;o enviar, o navegador enviar os dados inseridos no formul&#xE1;rio para o arquivo salvar.php, no qual voc&#xEA; por acessar com a <a href="http://php.net/manual/pt_BR/language.variables.superglobals.php" target="_blank">vari&#xE1;vel superglobal</a> <code>$_POST</code> caso voc&#xEA; tenha utilizado o m&#xE9;todo POST, e a superglobal <code>$_GET</code> caso voc&#xEA; tenha utilizando o m&#xE9;todo GET, as mesma s&#xE3;o um array chave-valor, cujo as chaves s&#xE3;o os name=&quot;&quot; do formul&#xE1;rios, e o valor os valores inseridos pelo usu&#xE1;rios, veja o arquivo salvar.php a seguir:</p>
+<p>Ao clicar no bot&#xE3;o enviar, o navegador envia os dados inseridos no formul&#xE1;rio para o arquivo salvar.php, no qual voc&#xEA; por acessar com a <a href="http://php.net/manual/pt_BR/language.variables.superglobals.php" target="_blank">vari&#xE1;vel superglobal</a> <code>$_POST</code> caso voc&#xEA; tenha utilizado o m&#xE9;todo POST, e a superglobal <code>$_GET</code> caso voc&#xEA; tenha utilizando o m&#xE9;todo GET, as mesmas s&#xE3;o um array chave-valor, cujo as chaves s&#xE3;o os <code>name=&quot;&quot;</code> do formul&#xE1;rio, e o valor os valores inseridos pelo usu&#xE1;rios, veja o arquivo salvar.php a seguir:</p>
 <pre><code class="lang-php"><span class="hljs-comment">// salvar.php</span>
 $conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&apos;mysql:host=localhost;dbname=php_tutorial;charset=utf8&apos;</span>, <span class="hljs-string">&apos;root&apos;</span>, <span class="hljs-string">&apos;&apos;</span>);
 
 $query = $conexao-&gt;prepare(<span class="hljs-string">&apos;INSERT INTO tabela_teste (nome, sobrenome, idade) VALUES (:nome, :sobrenome, :idade)&apos;</span>);
 
-$query-&gt;bindValue(<span class="hljs-string">&apos;:nome&apos;</span>, $_POST[<span class="hljs-string">&apos;nome&apos;</span>], PDO::PARAM_STR);
-$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, $_POST[<span class="hljs-string">&apos;sobrenome&apos;</span>], PDO::PARAM_STR);
-$query-&gt;bindValue(<span class="hljs-string">&apos;:idade&apos;</span>, $_POST[<span class="hljs-string">&apos;idade&apos;</span>], PDO::PARAM_INT);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:nome&apos;</span>, $_POST[<span class="hljs-string">&apos;nome&apos;</span>]);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, $_POST[<span class="hljs-string">&apos;sobrenome&apos;</span>]);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:idade&apos;</span>, $_POST[<span class="hljs-string">&apos;idade&apos;</span>]);
 
 $query-&gt;execute();
 
 <span class="hljs-keyword">echo</span> $_POST[<span class="hljs-string">&apos;nome&apos;</span>]. <span class="hljs-string">&apos; &apos;</span> . $_POST[<span class="hljs-string">&apos;sobrenome&apos;</span>] . <span class="hljs-string">&apos; foi cadastrado com sucesso&apos;</span>;
 </code></pre>
-<p>Note os $_POST, eles possuem os mesmos name=&quot;&quot; do formul&#xE1;rio, mas aten&#xE7;&#xE3;o, s&#xE3;o os name=&quot;&quot;, n&#xE3;o os id=&quot;&quot;, eles v&#xE3;o possuir os valores inseridos pelo usu&#xE1;rio, veja o formul&#xE1;rio preenchido:</p>
+<p>Note os $_POST, as chaves deles s&#xE3;o os mesmos <code>name=&quot;&quot;</code> do formul&#xE1;rio, mas aten&#xE7;&#xE3;o, s&#xE3;o os <code>name=&quot;&quot;</code>, n&#xE3;o os <code>id=&quot;&quot;</code>, eles v&#xE3;o possuir os valores inseridos pelo usu&#xE1;rio, veja o formul&#xE1;rio preenchido:</p>
 <p><img src="assets/form1.png" alt="Formul&#xE1;rio de cadastro preenchido"></p>
 <p>Ao clicarmos em Enviar, a p&#xE1;gina a seguir ser&#xE1; exibida:</p>
 <p><img src="assets/form2.png" alt="P&#xE1;gina com o resultado da submiss&#xE3;o"></p>
@@ -606,8 +615,8 @@ $query-&gt;execute();
 <p>E a nossa p&#xE1;gina teste.php da p&#xE1;gina sobre o PDO ficar&#xE1; assim:</p>
 <p><img src="assets/form4.png" alt="P&#xE1;gina teste.php com o novo resultado"></p>
 <p>Lembre-se que esse &#xE9; apenas um tutorial para iniciantes, cabe a voc&#xEA; procurar por formas melhores de valida&#xE7;&#xE3;o e inser&#xE7;&#xE3;o de dados, como disse antes, normalmente os frameworks te fornecem maneiras bem f&#xE1;ceis de fazer isso.</p>
-<h2 id="met&#xF3;do-get">Met&#xF3;do GET</h2>
-<p>O met&#xF3;do GET &#xE9; ideal para buscas, com ele voc&#xEA; pode ter chave-valor pela URL da p&#xE1;gina, a chamada query string, veja o exemplo a seguir:</p>
+<h2 id="m&#xE9;todo-get">M&#xE9;todo GET</h2>
+<p>O m&#xE9;todo GET &#xE9; ideal para buscas, com ele voc&#xEA; pode ter chave-valor pela URL da p&#xE1;gina, que chamamos de query string, veja o exemplo a seguir:</p>
 <pre><code class="lang-html"><span class="hljs-comment">&lt;!-- formulario2.html ou formulario2.php --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;GET&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;busca.php&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;nome&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;Nome&quot;</span>&gt;</span>
@@ -621,7 +630,7 @@ $conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&
 
 $query = $conexao-&gt;prepare(<span class="hljs-string">&apos;SELECT * FROM tabela_teste WHERE nome LIKE :busca&apos;</span>);
 
-$query-&gt;bindValue(<span class="hljs-string">&apos;:busca&apos;</span>, <span class="hljs-string">&apos;%&apos;</span> . $_GET[<span class="hljs-string">&apos;nome&apos;</span>] . <span class="hljs-string">&apos;%&apos;</span>, PDO::PARAM_STR);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:busca&apos;</span>, <span class="hljs-string">&apos;%&apos;</span> . $_GET[<span class="hljs-string">&apos;nome&apos;</span>] . <span class="hljs-string">&apos;%&apos;</span>);
 
 $query-&gt;execute();
 
@@ -631,12 +640,12 @@ $query-&gt;execute();
     <span class="hljs-keyword">echo</span> $linha[<span class="hljs-string">&apos;nome&apos;</span>] . <span class="hljs-string">&apos; &apos;</span> . $linha[<span class="hljs-string">&apos;sobrenome&apos;</span>] . <span class="hljs-string">&apos;, &apos;</span> . $linha[<span class="hljs-string">&apos;idade&apos;</span>] . <span class="hljs-string">&apos; anos&apos;</span> . <span class="hljs-string">&apos;&lt;br&gt;&apos;</span>;
 }
 </code></pre>
-<p>O comando <code>LIKE</code> &#xE9; usado normalmente para buscas, note que fazemos uma concatena&#xE7;&#xE3;o no <code>bindValue</code> com % no in&#xED;cio e no final, isso significa que queremos resultados que possuam em qualquer parte o valor de <code>$_GET[&apos;nome&apos;]</code>, caso tiver % apenas no in&#xED;cio, significaria que queririamos apenas o que termina com o valor de <code>$_GET[&apos;nome&apos;]</code>, e se estivesse com % apenas no ficaria, queririamos apenas o que come&#xE7;a com esse valor.</p>
+<p>O comando <code>LIKE</code> &#xE9; usado normalmente para buscas, note que fazemos uma concatena&#xE7;&#xE3;o no <code>bindValue</code> com % no in&#xED;cio e no final, isso significa que queremos resultados que possuam em qualquer parte o valor de <code>$_GET[&apos;nome&apos;]</code>, caso tiver % apenas no in&#xED;cio, significaria que queririamos apenas o que termina com o valor de <code>$_GET[&apos;nome&apos;]</code>, e se estivesse com % apenas no come&#xE7;o, queririamos apenas o que come&#xE7;a com esse valor.</p>
 <p>Agora no navegador, nosso formul&#xE1;rio ficar&#xE1; assim:</p>
 <p><img src="assets/form5.png" alt="Formul&#xE1;rio de busca"></p>
 <p>Ao clicar em Buscar, ir&#xE1; para essa p&#xE1;gina:</p>
 <p><img src="assets/form6.png" alt="Resultado de lef"></p>
-<p>Note o <code>?nome=lef</code> na URL, isso n&#xE3;o ocorre quando o formul&#xE1;rio &#xE9; do tipo post, nesse caso, <code>?nome=</code> &#xE9; o <code>name=&quot;&quot;</code> do campo de texto do nosso exemplo.</p>
+<p>Note o <code>?nome=lef</code> na URL, isso n&#xE3;o ocorre quando o formul&#xE1;rio &#xE9; do tipo post, nesse caso, <code>?nome=</code> &#xE9; o campo de texto com <code>name=&quot;nome&quot;</code> do nosso exemplo.</p>
 <p>Note tamb&#xE9;m que ele retornou o resultado cujo o campo nome do banco de dados possui &quot;lef&quot;, por causa do % explicado anteriormente, podendo mudar manualmente o <code>?nome=</code> na URL tamb&#xE9;m para realizar outra busca:</p>
 <p><img src="assets/form7.png" alt="Resultado de Ti"></p>
 <p>Ou uma busca sem resultados:</p>
@@ -684,7 +693,7 @@ $query-&gt;execute();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Formulários","level":"1.10","depth":1,"next":{"title":"Orientação a objetos","level":"1.11","depth":1,"path":"oop/README.md","ref":"oop/README.md","articles":[]},"previous":{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"forms/README.md","mtime":"2018-05-14T03:22:36.329Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Formulários","level":"1.10","depth":1,"next":{"title":"Orientação a objetos","level":"1.11","depth":1,"path":"oop/README.md","ref":"oop/README.md","articles":[]},"previous":{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"forms/README.md","mtime":"2018-05-15T02:46:58.499Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T02:47:27.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -709,10 +718,6 @@ $query-&gt;execute();
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

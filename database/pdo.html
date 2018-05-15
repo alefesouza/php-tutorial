@@ -1,14 +1,14 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="pt-br" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PDO · GitBook</title>
+        <title>PDO · Introdução a linguagem PHP</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
         
         
     
@@ -75,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="Escreva para pesquisar" />
 </div>
 
             
@@ -86,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/php-tutorial" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -521,7 +530,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            Publicado com GitBook
         </a>
     </li>
 </ul>
@@ -560,8 +569,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="pdo">PDO</h1>
-<p>Para acesso ao banco de dados utilizaremos o PDO, ou PHP Data Objects, que &#xE9; a forma recomendada de acessar o banco de dados pelo PHP, normalmente quando se utiliza o MySQL como banco de dados, ensinam as fun&#xE7;&#xF5;es do mysqli primeiro, deixando o PDO para pessoas mais experientes aprenderem depois (experi&#xEA;ncia pr&#xF3;pria...).</p>
-<p>A principal vantagem do PDO &#xE9; podermos acessar e executar queries SQL em nos principais banco de dados, n&#xE3;o apenas o MySQL, de forma muito f&#xE1;cil e simples.</p>
+<p>Para acesso ao banco de dados utilizaremos o PDO, ou <em>PHP Data Objects</em>, que &#xE9; a forma recomendada de acessar o banco de dados pelo PHP, normalmente quando se utiliza o MySQL como banco de dados, ensinam as fun&#xE7;&#xF5;es do mysqli primeiro, deixando o PDO para pessoas mais experientes aprenderem depois (experi&#xEA;ncia pr&#xF3;pria...).</p>
+<p>A principal vantagem do PDO &#xE9; podermos acessar e executar queries SQL nos principais banco de dados, n&#xE3;o apenas o MySQL, de forma muito f&#xE1;cil e simples.</p>
 <p>Para conectar no banco de dados do XAMPP, usaremos o seguinte c&#xF3;digo:</p>
 <pre><code class="lang-php">$db_host = <span class="hljs-string">&apos;localhost&apos;</span>;
 $db_nome = <span class="hljs-string">&apos;php_tutorial&apos;</span>;
@@ -574,24 +583,24 @@ $conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&
 <p>Vamos em seguidas fazer um CRUD utilizando o PDO.</p>
 <h2 id="create">Create</h2>
 <p>Ap&#xF3;s isso, poderemos executar queries SQL, que &#xE9; a forma mais comum de executar comandos em bancos de dados.</p>
-<p>Por exemplos, caso queiramos inserir um dado na tabela <code>tabela_teste</code> que criamos pelo phpMyAdmin, podemos executar o seguinte comando:</p>
+<p>Por exemplo, caso queiramos inserir um dado na tabela <code>tabela_teste</code> que criamos pelo phpMyAdmin, podemos executar o seguinte comando:</p>
 <pre><code class="lang-php">$conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&apos;mysql:host=localhost;dbname=php_tutorial;charset=utf8&apos;</span>, <span class="hljs-string">&apos;root&apos;</span>, <span class="hljs-string">&apos;&apos;</span>);
 
 $query = $conexao-&gt;prepare(<span class="hljs-string">&apos;INSERT INTO tabela_teste (nome, sobrenome, idade) VALUES (:nome, :sobrenome, :idade)&apos;</span>);
 
-$query-&gt;bindValue(<span class="hljs-string">&apos;:nome&apos;</span>, <span class="hljs-string">&apos;Rasmus&apos;</span>, PDO::PARAM_STR);
-$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, <span class="hljs-string">&apos;Lerdorf&apos;</span>, PDO::PARAM_STR);
-$query-&gt;bindValue(<span class="hljs-string">&apos;:idade&apos;</span>, <span class="hljs-number">49</span>, PDO::PARAM_INT);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:nome&apos;</span>, <span class="hljs-string">&apos;Rasmus&apos;</span>);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, <span class="hljs-string">&apos;Lerdorf&apos;</span>);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:idade&apos;</span>, <span class="hljs-number">49</span>);
 
 $query-&gt;execute();
 </code></pre>
-<p>Inicialmente criamos nossa conex&#xE3;o com o banco de dados, ent&#xE3;o declaramos uma vari&#xE1;vel <code>$query</code> onde colocaremos nossa instru&#xE7;&#xE3;o SQL que queremos executar no banco, no caso &#xE9; um INSERT na tabela <code>tabela_teste</code> que criamos no phpMyAdmin, note que a query possui os par&#xE2;metros :nome, :sobrenome e :idade, esses valores ser&#xE3;o substitu&#xED;dos pelos bindValue no c&#xF3;digo logo em seguida.</p>
-<p>Com o m&#xE9;todo bindValue podemos substituir par&#xE2;metros na nossa query SQL, no pr&#xF3;ximo par&#xE1;grafo eu explico o por qu&#xEA; disso, no primeiro argumento colocando qual par&#xE2;metro queremos substituir, em seguida o seu valor, e depois o seu tipo, ent&#xE3;o usamos o comando para executar nossa query, que executar&#xE1; o seguinte comando no banco de dados:</p>
+<p>Inicialmente criamos nossa conex&#xE3;o com o banco de dados, ent&#xE3;o declaramos uma vari&#xE1;vel <code>$query</code> onde colocaremos nossa instru&#xE7;&#xE3;o SQL que queremos executar no banco, no caso &#xE9; um <code>INSERT</code> na tabela <code>tabela_teste</code> que criamos no phpMyAdmin, note que a query possui os par&#xE2;metros <code>:nome</code>, <code>:sobrenome</code> e <code>:idade</code>, esses valores ser&#xE3;o substitu&#xED;dos pelos <code>bindValue</code> no c&#xF3;digo logo em seguida.</p>
+<p>Com o m&#xE9;todo <code>bindValue</code> podemos substituir par&#xE2;metros na nossa query SQL, no pr&#xF3;ximo par&#xE1;grafo eu explico o por qu&#xEA; disso, no primeiro argumento colocando qual par&#xE2;metro queremos substituir, e em seguida o seu valor, ent&#xE3;o usamos o comando para <code>$var-&gt;execute()</code> executar nossa query, que no final executar&#xE1; o seguinte comando no banco de dados:</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> tabela_teste <span class="hljs-keyword">VALUES</span> (nome, sobrenome, idade) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;Rasmus&apos;</span>, <span class="hljs-string">&apos;Lerdorf&apos;</span>, <span class="hljs-number">49</span>);
 </code></pre>
 <p>Fazendo os dados da nossa tabela ficar assim no phpMyAdmin:</p>
 <p><img src="assets/phpmyadmin/phpmyadmin9.png" alt="Tela do phpMyAdmin com os novos dados"></p>
-<p>A vantagem de usar o prepare com os bindValues &#xE9; evitar o famoso <a href="https://www.tecmundo.com.br/tecmundo-explica/113195-sql-injection-saiba-tudo-ataque-simples-devastador.htm" target="_blank">SQL Injection</a>, que impede que usu&#xE1;rios mal-intencionados tentem executar algum SQL ao preencher um formul&#xE1;rio, o que n&#xE3;o acontece caso voc&#xEA; use concatena&#xE7;&#xE3;o diretamente.</p>
+<p>A vantagem de usar o <code>prepare</code> com os <code>bindValues</code> &#xE9; evitar o famoso <a href="https://www.tecmundo.com.br/tecmundo-explica/113195-sql-injection-saiba-tudo-ataque-simples-devastador.htm" target="_blank">SQL Injection</a>, assim impedindo que usu&#xE1;rios mal-intencionados tentem executar algum SQL ao preencher um formul&#xE1;rio, o que n&#xE3;o acontece caso voc&#xEA; use concatena&#xE7;&#xE3;o diretamente ao inv&#xE9;s dos par&#xE2;metros.</p>
 <h2 id="read">Read</h2>
 <p>Podemos fazer uma leitura de uma tabela com o seguinte comando:</p>
 <pre><code class="lang-php"><span class="hljs-comment">// teste.php</span>
@@ -607,7 +616,7 @@ $query-&gt;execute();
 </code></pre>
 <p>O c&#xF3;digo acima exibir&#xE1; o seguinte o navegador:</p>
 <p><img src="assets/pdo/pdo1.png" alt="Resultado do c&#xF3;digo acima"></p>
-<p>O que ocorre &#xE9; que fizemos um comando que seleciona todos os registros da tabela <code>tabela_teste</code>, a condi&#xE7;&#xE3;o naquele <code>while</code> retorna a pr&#xF3;xima linha da tabela cada vez que for executada, e p&#xF5;e o valos das colunas da mesma em um array chave-valor na vari&#xE1;vel <code>$linha</code>, com as chaves sendo o nome das colunas e o valor o valor da mesma coluna na linha atual, e quando n&#xE3;o houver mais linhas, ela retorna falso, assim parando o <code>while</code>.</p>
+<p>O que ocorre &#xE9; que fizemos um comando que seleciona todos os registros da tabela <code>tabela_teste</code>, a condi&#xE7;&#xE3;o naquele <code>while</code> retorna a pr&#xF3;xima linha da tabela cada vez que for executada, e p&#xF5;e o valor das colunas da mesma em um array chave-valor na vari&#xE1;vel <code>$linha</code>, com as chaves sendo o nome das colunas e o valor o valor da mesma coluna na linha atual, e quando n&#xE3;o houver mais linhas, ela retorna falso, assim parando o <code>while</code>.</p>
 <p>Poder&#xED;amos colocar o WHERE no SQL para retornar linhas mediante certa condi&#xE7;&#xE3;o, podendo retornar dados s&#xF3; de uma pessoa ou fazer uma busca, caso queira saber mais sobre essas condi&#xE7;&#xF5;es, <a href="https://www.devmedia.com.br/sql-clausula-where/37645" target="_blank">esse link</a> possui uma boa explica&#xE7;&#xE3;o.</p>
 <h2 id="update">Update</h2>
 <p>Podemos fazer uma atualiza&#xE7;&#xE3;o em um registro de uma tabela com o seguinte comando:</p>
@@ -615,33 +624,33 @@ $query-&gt;execute();
 
 $query = $conexao-&gt;prepare(<span class="hljs-string">&apos;UPDATE tabela_teste SET sobrenome=:sobrenome WHERE id=:id&apos;</span>);
 
-$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, <span class="hljs-string">&apos;Pereira&apos;</span>, PDO::PARAM_STR);
-$query-&gt;bindValue(<span class="hljs-string">&apos;:id&apos;</span>, <span class="hljs-number">1</span>, PDO::PARAM_INT);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:sobrenome&apos;</span>, <span class="hljs-string">&apos;Pereira&apos;</span>);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:id&apos;</span>, <span class="hljs-number">1</span>);
 
 $query-&gt;execute();
 </code></pre>
 <p>No final ser&#xE1; executado o seguinte comando no banco de dados:</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">UPDATE</span> tabela_teste <span class="hljs-keyword">SET</span> sobrenome=<span class="hljs-string">&apos;Pereira&apos;</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">id</span>=<span class="hljs-number">1</span>;
 </code></pre>
-<p>Nesse caso utilizamos o comando UPDATE (atualizar) dizendo que queremos atualizar para &quot;Pereira&quot; o campo sobrenome do registro que possui o id igual a 1.</p>
+<p>Nesse caso utilizamos o comando <code>UPDATE</code> (atualizar) dizendo que queremos atualizar para &quot;Pereira&quot; o campo sobrenome do registro que possui o id igual a 1.</p>
 <p>Ap&#xF3;s a execu&#xE7;&#xE3;o desse comando, nosso phpMyAdmin ficar&#xE1; assim:</p>
 <p><img src="assets/phpmyadmin/phpmyadmin10.png" alt="Tela do phpMyAdmin com dados atualizados"></p>
 <p>E a p&#xE1;gina teste.php ficar&#xE1; assim:</p>
 <p><img src="assets/pdo/pdo2.png" alt="teste.php atualizada"></p>
 <h2 id="delete">Delete</h2>
-<p>Podemos fazer apagar um registro de uma tabela com o seguinte comando:</p>
+<p>Podemos tamb&#xE9;m apagar um registro de uma tabela com o seguinte comando:</p>
 <pre><code class="lang-php">$conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&apos;mysql:host=localhost;dbname=php_tutorial;charset=utf8&apos;</span>, <span class="hljs-string">&apos;root&apos;</span>, <span class="hljs-string">&apos;&apos;</span>);
 
 $query = $conexao-&gt;prepare(<span class="hljs-string">&apos;DELETE FROM tabela_teste WHERE id=:id&apos;</span>);
 
-$query-&gt;bindValue(<span class="hljs-string">&apos;:id&apos;</span>, <span class="hljs-number">2</span>, PDO::PARAM_INT);
+$query-&gt;bindValue(<span class="hljs-string">&apos;:id&apos;</span>, <span class="hljs-number">2</span>);
 
 $query-&gt;execute();
 </code></pre>
 <p>No final ser&#xE1; executado o seguinte comando no banco de dados:</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">DELETE</span> <span class="hljs-keyword">FROM</span> tabela_teste <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">id</span>=<span class="hljs-number">2</span>;
 </code></pre>
-<p>Nesse caso utilizamos o comando DELETE (apagar) apagar o registro que possui o id igual a 2.</p>
+<p>Nesse caso utilizamos o comando <code>DELETE</code> (apagar) para apagar o registro que possui o id igual a 2.</p>
 <p>Ap&#xF3;s a execu&#xE7;&#xE3;o desse comando, nosso phpMyAdmin ficar&#xE1; assim:</p>
 <p><img src="assets/phpmyadmin/phpmyadmin11.png" alt="Tela do phpMyAdmin com dados atualizados"></p>
 <p>E a p&#xE1;gina teste.php ficar&#xE1; assim:</p>
@@ -691,7 +700,7 @@ $query-&gt;execute();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PDO","level":"1.9.2","depth":2,"next":{"title":"Formulários","level":"1.10","depth":1,"path":"forms/README.md","ref":"forms/README.md","articles":[]},"previous":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"database/pdo.md","mtime":"2018-05-14T02:18:14.749Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PDO","level":"1.9.2","depth":2,"next":{"title":"Formulários","level":"1.10","depth":1,"path":"forms/README.md","ref":"forms/README.md","articles":[]},"previous":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"database/pdo.md","mtime":"2018-05-15T02:46:58.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T02:47:27.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -716,10 +725,6 @@ $query-&gt;execute();
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

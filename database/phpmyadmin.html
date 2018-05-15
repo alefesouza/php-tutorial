@@ -1,14 +1,14 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="pt-br" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>phpMyAdmin · GitBook</title>
+        <title>phpMyAdmin · Introdução a linguagem PHP</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
         
         
     
@@ -75,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="Escreva para pesquisar" />
 </div>
 
             
@@ -86,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/php-tutorial" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -521,7 +530,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            Publicado com GitBook
         </a>
     </li>
 </ul>
@@ -566,21 +575,21 @@
 <p>Voc&#xEA; conseguir&#xE1; acess&#xE1;-lo no endere&#xE7;o <a href="http://localhost/phpmyadmin" target="_blank">http://localhost/phpmyadmin</a>, o username padr&#xE3;o &#xE9; &quot;root&quot;, o campo senha voc&#xEA; pode deixar vazio, como na imagem a seguir:</p>
 <p><img src="assets/phpmyadmin/phpmyadmin1.png" alt="Tela de login do phpMyAdmin"></p>
 <p>Caso tenha ocorrido tudo certo, voc&#xEA; ir&#xE1; estar em uma tela igual essa:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin2.png" alt="Tela de login do phpMyAdmin"></p>
+<p><img src="assets/phpmyadmin/phpmyadmin2.png" alt="Tela inicial do phpMyAdmin"></p>
 <p>Para come&#xE7;ar, precisamos criar um banco de dados, para isso, clique em New na lateral esquerda, voc&#xEA; ir&#xE1; estar em uma tela igual essa:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin3.png" alt="Tela de login do phpMyAdmin"></p>
-<p>Ali no campo de texto abaixo de <em>Create database</em>, digite <em>php_tutorial</em>, esse ser&#xE1; o nome do nosso banco de dados, e clique em create, voc&#xEA; ir&#xE1; cair em uma tela igual essa:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin4.png" alt="Tela de login do phpMyAdmin"></p>
-<p>Agora criaremos uma tabela, ali no primeira campo de texto, coloque <em>tabela_teste</em>, o n&#xFA;mero de colunas pode ser 4 mesmo, ent&#xE3;o clique em Go, voc&#xEA; ir&#xE1; cair uma tela igual a seguir, preencha com os seguintes dados:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin5.png" alt="Tela de login do phpMyAdmin"></p>
-<p>Assim dizemos que criaremos uma coluna chamada <em>id</em> do <em>int</em>, ou seja, ela receber&#xE1; apenas n&#xFA;meros inteiros (<strong>int</strong>egers), marcaremos tamb&#xE9;m o checkbox <em>A_I</em>, <em>auto increment</em>, isso significa que n&#xE3;o precisamos preench&#xEA;-lo manualmente, pois a cada novo registro ele aumentar&#xE1; em 1 automaticamente nunca se repetindo, isso tamb&#xE9;m marcar&#xE1; o &#xED;ndice PRIMARY, indicando ser a chave prim&#xE1;ria do banco.</p>
-<p>Tamb&#xE9;m criaremos uma coluna <em>nome</em> e <em>outra</em> sobrenome, do tipo VARCHAR (aceita qualquer caractere) com limite de 255 caracteres, e outra coluna chamada <em>idade</em>, que tamb&#xE9;m receber&#xE1; apenas n&#xFA;meros inteiros.</p>
+<p><img src="assets/phpmyadmin/phpmyadmin3.png" alt="Tela de cria&#xE7;&#xE3;o de banco de dados do phpMyAdmin"></p>
+<p>Ali no campo de texto abaixo de <em>Create database</em>, digite <em>php_tutorial</em>, esse ser&#xE1; o nome do nosso banco de dados, e clique em <em>Create</em>, voc&#xEA; ir&#xE1; cair em uma tela igual essa:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin4.png" alt="Tela de cria&#xE7;&#xE3;o de tabela do phpMyAdmin"></p>
+<p>Agora criaremos uma tabela, ali no primeira campo de texto, coloque <em>tabela_teste</em>, o n&#xFA;mero de colunas pode ser 4 mesmo, ent&#xE3;o clique em <em>Go</em>, voc&#xEA; ir&#xE1; cair uma tela igual a seguir, preencha com os seguintes dados:</p>
+<p><img src="assets/phpmyadmin/phpmyadmin5.png" alt="Tela de preenchimentos da estrutura da tabela do phpMyAdmin"></p>
+<p>Assim dizemos que criaremos uma coluna chamada <em>id</em> do <em>int</em>, ou seja, ela receber&#xE1; apenas n&#xFA;meros inteiros (<strong>int</strong>egers), marcaremos tamb&#xE9;m o checkbox <em>A_I</em>, <em>auto increment</em>, isso significa que n&#xE3;o precisamos preench&#xEA;-lo manualmente, pois a cada novo registro ele aumentar&#xE1; em 1 automaticamente nunca se repetindo, isso tamb&#xE9;m marcar&#xE1; o &#xED;ndice PRIMARY, indicando ser a chave prim&#xE1;ria da tabela.</p>
+<p>Tamb&#xE9;m criaremos uma coluna <em>nome</em> e outra <em>sobrenome</em>, do tipo VARCHAR (aceita qualquer caractere) com limite de 255 caracteres, e outra coluna chamada <em>idade</em>, que tamb&#xE9;m receber&#xE1; apenas n&#xFA;meros inteiros.</p>
 <p>Ap&#xF3;s isso, clique em Save, voc&#xEA; ir&#xE1; chegar em uma tela igual a seguinte, mostrando os dados da estrutura da tabela:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin6.png" alt="Tela de login do phpMyAdmin"></p>
+<p><img src="assets/phpmyadmin/phpmyadmin6.png" alt="Tela com a estrutura da tabela criada phpMyAdmin"></p>
 <p>Voc&#xEA; pode inserir dados pelo pr&#xF3;prio phpMyAdmin, clique em Inserir no menu superior, e preencha os dados, deixando o campo <em>id</em> vazio pois ser&#xE1; preenchido automaticamente:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin7.png" alt="Tela de login do phpMyAdmin"></p>
+<p><img src="assets/phpmyadmin/phpmyadmin7.png" alt="Tela de inser&#xE7;&#xE3;o de dados do phpMyAdmin"></p>
 <p>Clique em Go e depois em Browse no menu seperior, voc&#xEA; estar&#xE1; em uma tela igual a seguinte:</p>
-<p><img src="assets/phpmyadmin/phpmyadmin8.png" alt="Tela de login do phpMyAdmin"></p>
+<p><img src="assets/phpmyadmin/phpmyadmin8.png" alt="Tela de resultados do phpMyAdmin"></p>
 <p>Podemos criar, acessar, atualizar e excluir dados, o famoso CRUD (<strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, <strong>D</strong>elete) pelo PHP, o que aprenderemos na p&#xE1;gina seguinte.</p>
 
                                 
@@ -625,7 +634,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"next":{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]},"previous":{"title":"Banco de dados","level":"1.9","depth":1,"path":"database/README.md","ref":"database/README.md","articles":[{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"database/phpmyadmin.md","mtime":"2018-05-14T02:18:14.749Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"next":{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]},"previous":{"title":"Banco de dados","level":"1.9","depth":1,"path":"database/README.md","ref":"database/README.md","articles":[{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},{"title":"PDO","level":"1.9.2","depth":2,"path":"database/pdo.md","ref":"database/pdo.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"database/phpmyadmin.md","mtime":"2018-05-15T02:46:58.499Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T02:47:27.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -650,10 +659,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

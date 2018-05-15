@@ -1,14 +1,14 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="pt-br" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Funções · GitBook</title>
+        <title>Funções · Introdução a linguagem PHP</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="Alefe Souza <contact@alefesouza.com>">
         
         
     
@@ -75,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="Escreva para pesquisar" />
 </div>
 
             
@@ -86,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://github.com/alefesouza/php-tutorial" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -521,7 +530,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            Publicado com GitBook
         </a>
     </li>
 </ul>
@@ -567,26 +576,26 @@
 
 <span class="hljs-keyword">echo</span> soma(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// Exibe: 5</span>
 </code></pre>
-<p>Analisando o c&#xF3;digo acima, usamos a palavra reservada <code>function</code> seguido do nome que queremos dar a fun&#xE7;&#xE3;o, e ent&#xE3;o colocamos entre parentes os argumentos da fun&#xE7;&#xE3;o, que funcionam como vari&#xE1;veis, podendo usar e ser modificado dentro do bloco da fun&#xE7;&#xE3;o.</p>
-<p>Usamos a palavra reservada <code>return</code> para retorna algum valor ou parar a execu&#xE7;&#xE3;o dela, o que n&#xE3;o &#xE9; obrigat&#xF3;rio caso voc&#xEA; queira apenas repetir um algoritmo, &#xE9; comum ter um return vazio dentro de condicionais em fun&#xE7;&#xF5;es que n&#xE3;o retornam valor, exemplo:</p>
+<p>Analisando o c&#xF3;digo acima, usamos a palavra-chave <code>function</code> seguido do nome que queremos dar a fun&#xE7;&#xE3;o, e ent&#xE3;o colocamos entre parentes os argumentos da fun&#xE7;&#xE3;o, que funcionam como vari&#xE1;veis, podendo usar e ser modificado dentro do bloco da fun&#xE7;&#xE3;o.</p>
+<p>Usamos a palavra-chave <code>return</code> para retorna algum valor ou parar a execu&#xE7;&#xE3;o dela, o que n&#xE3;o &#xE9; obrigat&#xF3;rio caso voc&#xEA; queira apenas repetir um algoritmo, &#xE9; comum ter um return vazio dentro de condicionais em fun&#xE7;&#xF5;es que n&#xE3;o retornam valor, exemplo:</p>
 <pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">teste</span><span class="hljs-params">($nome)</span> </span>{
     <span class="hljs-keyword">if</span> ($nome == <span class="hljs-string">&apos;Alefe&apos;</span>)  {
          <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem exibida se $nome for igual a Alefe&apos;</span>;
          <span class="hljs-keyword">return</span>;
     }
 
-    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A fun&#xE7;&#xE3;o continua se $numero n&#xE3;o for igual a Alefe&apos;</span>;
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;A fun&#xE7;&#xE3;o continua se $nome n&#xE3;o for igual a Alefe&apos;</span>;
 }
 
 teste(<span class="hljs-string">&apos;Alefe&apos;</span>); <span class="hljs-comment">// Exibe apenas o primeiro echo</span>
 teste(<span class="hljs-string">&apos;Rasmus&apos;</span>); <span class="hljs-comment">// Exibe apenas o segundo echo</span>
 </code></pre>
 <p>Caso n&#xE3;o tivesse o <code>return</code> no exemplo acima, a chamada de fun&#xE7;&#xE3;o <code>teste(&apos;Alefe&apos;)</code> exibiria as duas mensagens.</p>
-<p>Os argumentos Tamb&#xE9;m n&#xE3;o &#xE9; obrigat&#xF3;rio fun&#xE7;&#xF5;es terem argumentos, voc&#xEA; pode us&#xE1;-las somente pra evitar repeti&#xE7;&#xE3;o de c&#xF3;digo mesmo:</p>
-<pre><code class="lang-php">funciona teste() {
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 1&apos;</span>;
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 2&apos;</span>;
-  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 3&apos;</span>;
+<p>Tamb&#xE9;m n&#xE3;o &#xE9; obrigat&#xF3;rio fun&#xE7;&#xF5;es terem argumentos, voc&#xEA; pode us&#xE1;-las somente pra evitar repeti&#xE7;&#xE3;o de c&#xF3;digo:</p>
+<pre><code class="lang-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">teste</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 1&lt;br&gt;&apos;</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 2&lt;br&gt;&apos;</span>;
+  <span class="hljs-keyword">echo</span> <span class="hljs-string">&apos;Mensagem 3&lt;br&gt;&apos;</span>;
 }
 
 teste();
@@ -638,7 +647,7 @@ teste();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Funções","level":"1.6","depth":1,"next":{"title":"Funções globais","level":"1.6.1","depth":2,"path":"functions/globals.md","ref":"functions/globals.md","articles":[]},"previous":{"title":"Multidimensional","level":"1.5.3","depth":2,"path":"arrays/multidimensional.md","ref":"arrays/multidimensional.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["exercises","livereload"],"pluginsConfig":{"exercises":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"functions/README.md","mtime":"2018-05-14T02:18:14.749Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-14T03:22:58.257Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Funções","level":"1.6","depth":1,"next":{"title":"Funções globais","level":"1.6.1","depth":2,"path":"functions/globals.md","ref":"functions/globals.md","articles":[]},"previous":{"title":"Multidimensional","level":"1.5.3","depth":2,"path":"arrays/multidimensional.md","ref":"arrays/multidimensional.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"functions/README.md","mtime":"2018-05-15T02:46:58.499Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T02:47:27.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -663,10 +672,6 @@ teste();
     
         
         <script src="../gitbook/gitbook-plugin-exercises/exercises.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
