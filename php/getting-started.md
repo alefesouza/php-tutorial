@@ -1,4 +1,4 @@
-# Iniciando
+# O PHP: Iniciando
 
 Para começar a desenvolver em PHP você precisará de um servidor local, o mais comum para iniciantes é instalar o [XAMPP](https://www.apachefriends.org), por possuir uma interface gráfica simples e fácil de usar, e já vir com o banco de dados MySQL configurado.
 
@@ -26,7 +26,7 @@ Clique no botão Start do Apache e MySQL para iniciar o servidor dos mesmos, a t
 
 ![Painel do XAMPP iniciado](./assets/getting-started/xampp6.png)
 
-Note o número da porta, sendo 80, 443 no Apache, isso significa que você pode acessar seus arquivos PHP pelo endereço http://localhost pois a porta 80 é a porta padrão, caso estive outro número ali, como por exemplo 8000, você precisaria acessar pelo endereço http://localhost:8000.
+Note o número da porta, sendo 80, 443 no Apache, isso significa que você pode acessar seus arquivos PHP pelo endereço http://localhost pois a porta 80 é a porta padrão, caso estive outro número ali, como por exemplo 8000, você precisará acessar pelo endereço http://localhost:8000.
 
 Caso você tenha selecionado a pasta C:/xampp como a pasta de instalação do XAMPP, você pode adicionar seus arquivos PHP na pasta C:/xampp/htdocs, como na imagem abaixo:
 

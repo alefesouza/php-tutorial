@@ -10,9 +10,9 @@ function soma($num1, $num2) {
 echo soma(2, 3); // Exibe: 5
 ```
 
-Analisando o código acima, usamos a palavra reservada ```function``` seguido do nome que queremos dar a função, e então colocamos entre parentes os argumentos da função, que funcionam como variáveis, podendo usar e ser modificado dentro do bloco da função.
+Analisando o código acima, usamos a palavra-chave `function` seguido do nome que queremos dar a função, e então colocamos entre parentes os argumentos da função, que funcionam como variáveis, podendo usar e ser modificado dentro do bloco da função.
 
-Usamos a palavra reservada ```return``` para retorna algum valor ou parar a execução dela, o que não é obrigatório caso você queira apenas repetir um algoritmo, é comum ter um return vazio dentro de condicionais em funções que não retornam valor, exemplo:
+Usamos a palavra-chave `return` para retorna algum valor ou parar a execução dela, o que não é obrigatório caso você queira apenas repetir um algoritmo, é comum ter um return vazio dentro de condicionais em funções que não retornam valor, exemplo:
 
 ```php
 function teste($nome) {
@@ -21,22 +21,22 @@ function teste($nome) {
          return;
     }
 
-    echo 'A função continua se $numero não for igual a Alefe';
+    echo 'A função continua se $nome não for igual a Alefe';
 }
 
 teste('Alefe'); // Exibe apenas o primeiro echo
 teste('Rasmus'); // Exibe apenas o segundo echo
 ```
 
-Caso não tivesse o ```return``` no exemplo acima, a chamada de função ```teste('Alefe')``` exibiria as duas mensagens.
+Caso não tivesse o `return` no exemplo acima, a chamada de função `teste('Alefe')` exibiria as duas mensagens.
 
-Os argumentos Também não é obrigatório funções terem argumentos, você pode usá-las somente pra evitar repetição de código mesmo:
+Também não é obrigatório funções terem argumentos, você pode usá-las somente pra evitar repetição de código:
 
 ```php
-funciona teste() {
-  echo 'Mensagem 1';
-  echo 'Mensagem 2';
-  echo 'Mensagem 3';
+function teste() {
+  echo 'Mensagem 1<br>';
+  echo 'Mensagem 2<br>';
+  echo 'Mensagem 3<br>';
 }
 
 teste();

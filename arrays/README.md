@@ -9,7 +9,7 @@ echo $nomes[0]; // Exibe: Ada
 echo $nomes[2]; // Exibe: Charles
 ```
 
-Note que armazenamos três valores na variável nome, e podemos acessá-los utilizando o nome da variável seguido do número do índice ou chave.
+Note que armazenamos três valores na variável nome, e podemos acessá-los utilizando o nome da variável seguido do número do índice ou chave entre colchetes.
 
 Pode ser que você encontre arrays sendo declarados da seguinte forma:
 
@@ -17,4 +17,4 @@ Pode ser que você encontre arrays sendo declarados da seguinte forma:
 $nomes = array('Ada', 'Alefe', 'Charles');
 ```
 
-Em versões muito antigas do PHP essa era a única forma de declarar arrays, mas só muda usar array(valores) ao invés de [valores], o resto funciona da mesma forma.
+Em versões muito antigas do PHP essa era a única forma de declarar arrays, mas só muda usar `array(valores)` ao invés de `[valores]`, o resto funciona da mesma forma.

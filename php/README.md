@@ -1,8 +1,8 @@
 # O PHP
 
-O PHP (originalmente _Personal Home Page_, mas renomeado para _PHP: Hypertext Preprocessor_, ou _PHP: Pré-processador de Hipertexto_) é uma linguagem de programação criada na Groenlândia por Rasmus Lerdorf em 1994, com o objetivo inicial de ser apenas uma linguagem para criar páginas web simples.
+O PHP (originalmente _Personal Home Page_, mas renomeado para _PHP: Hypertext Preprocessor_, ou _PHP: Pré-processador de Hipertexto_) é uma linguagem de programação criada por Rasmus Lerdorf em 1994, com o objetivo inicial de ser apenas uma linguagem para criar páginas web simples.
 
-Usado normalmente para programação do back-end de sites, ou seja, o processo que você não vê nos websites, todo o processamento do servidor do site envia até o seu computador e celular, e você enviar pro servidor, por exemplo:
+Usado normalmente para programação do back-end de sites, ou seja, o processo que você não vê nos websites, todo o processamento do servidor do site envia até o seu computador e celular, e você envia pro servidor, por exemplo:
 
 * Quando você preenche o login e senha em um site, o back-end (o que você não vê) recebe essas informações e compara em um banco de dados se elas são válidas, assim iniciando uma sessão.
 * Esse back-end pode procurar por posts usando o seu ID de usuário no banco de dados, o mesmo que possui o login e senha que você inseriu e processa um HTML (pré-processador de hipertexto?) que envia para o seu navegador, assim exibindo coisas específicas para você.

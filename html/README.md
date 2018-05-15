@@ -1,6 +1,6 @@
 # Uso com HTML
 
-Uma das melhores coisas do PHP (ou piores, se usada de maneira errada) é poder ser usando em conjunto com código HTML, de forma que você pode colocar condicionais que exibem um código HTML ou outro, usar loops para exibir listas, etc.
+Uma das melhores coisas do PHP (ou piores, se usada de maneira errada) é poder ser usado em conjunto com código HTML, de forma que você pode colocar condicionais que exibem um código HTML ou outro, usar loops para exibir listas, etc.
 
 Lembra do começo do HTML onde falado que devemos usar o `?>` apenas quando não tiver apenas HTML no arquivo? Veja o exemplo a seguir:
 
@@ -10,12 +10,12 @@ Lembra do começo do HTML onde falado que devemos usar o `?>` apenas quando não
 
 Quando executarmos o arquivo com esse código no navegador, ele exibirá:
 
-**7**
+**5**
 
 Isso ocorre porque apenas o código dentro de `<?php ?>` será processado pelo PHP, o que estiver fora dele será enviado como HTML normalmente para o navegador, como as tags `<b>`, que deixam o texto em negrito, junto com o resultado final dos `echo` que colocamos, exatamente onde colocamos, ou seja, o que o navegador receberá será:
 
 ```html
-<b>7</b>
+<b>5</b>
 ```
 
 Podemos também fazer condicionais e enviar determinado HTML para o navegador dependendo delas:
@@ -37,7 +37,7 @@ _O valor de $nome é Alefe_
 
 Note que abrimos e fechamos várias vezes o `<?php ?>` para dizer que é uma continuação, há também a shorttag `<?= $variavel; ?>`, que é apenas uma simplificação de `<?php echo $variavel; ?>`, ou seja, serve apenas para exibir algum valor na tela.
 
-Caso o valor de $nome fosse outro, como por exemplo Rasmus, a saída seria:
+Caso o valor de `$nome` fosse outro, como por exemplo Rasmus, exibiria na tela:
 
 _O valor de $nome não é Alefe, seu valor é Rasmus_
 
@@ -72,7 +72,7 @@ Que exibirá um lista igual a seguir:
 
 Embora pareça muito legal, não é uma boa prática deixar lógica e HTML no mesmo arquivo, pois conforme o projeto cresce, pode deixar o código feio e confuso, houve uma época que isso era muito comum e acabou deixando o PHP com uma certa má fama por ser comum misturar todo o código em um único arquivo.
 
-Assim como em qualquer outra linguagem de back-end, o ideal seria utilizar algum framework para gerenciar melhor o código PHP (controller) e o HTML (view), mas como o foco desse tutorial é apenas dar uma introdução, no momento o melhor que podemos fazer seria deixar todo o código PHP em um arquivo e o código HTML em outro, apenas exibindo o valor das variáveis, caso você tenha mais interesse na linguagem, recomendo estudar algum framework PHP, existem vários, como Zend, Symfony, CakePHP, e o meu favorito e também um dos principais atualmente é o [Laravel](http://laravel.com).
+Assim como em qualquer outra linguagem de back-end, o ideal seria utilizar algum framework para gerenciar melhor o código PHP (controller) e o HTML (view), mas como o foco desse tutorial é apenas dar uma introdução, no momento o melhor que podemos fazer seria deixar todo o código PHP em um arquivo e o código HTML em outro, apenas exibindo o valor das variáveis, caso você tenha mais interesse na linguagem, recomendo estudar algum framework PHP, existem vários, os mais famosos são [Zend](https://framework.zend.com), [Symfony](https://symfony.com), [CodeIgniter](https://codeigniter.com), [CakePHP](https://cakephp.org), e o meu favorito, [Laravel](http://laravel.com).
 
 Continuando o tutorial, existe a função global `include`, no qual você adicionar todo o código de um arquivo PHP em outro, veremos um separação e lógica e HTML no exemplo a seguir:
 

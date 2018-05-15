@@ -1,6 +1,6 @@
 # Comandor de repetição: do...while
 
-O comando de repetição ```do...while``` funciona da mesma forma do ```while```, porém dessa vez a condição vem no final, garantindo que o código seja executado pelo menos uma vez, mesmo que a condição seja falta inicialmente, exemplo:
+O comando de repetição `do...while` funciona da mesma forma do `while`, porém dessa vez a condição vem no final, garantindo que o código seja executado pelo menos uma vez, mesmo que a condição seja falsa inicialmente, exemplo:
 
 ```php
 $i = 0;

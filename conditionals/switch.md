@@ -1,6 +1,6 @@
 # Condicionais: switch
 
-Com o comando switch podemos realizar diversas comparações ao mesmo tempo, não precisando declarar vários else if, como no exemplo a seguir:
+Com o comando `switch` podemos realizar diversas comparações ao mesmo tempo, não precisando declarar vários `else if`, como no exemplo a seguir:
 
 ```php
 $numero = 5;
@@ -22,7 +22,7 @@ switch ($numero) {
 }
 ```
 
-Veja o mesmo código utilizando o if:
+Veja o mesmo código utilizando o `if`:
 
 ```php
 $numero = 5;
@@ -38,7 +38,7 @@ if ($numero == 1) {
 }
 ```
 
-Ele é muito útil para deixar o código mais limpo e escrever menos códigos caso tenha ainda mais condicionais, você também pode usá-lo com strings:
+Ele é muito útil para deixar o código mais limpo e escrever menos código caso tenha ainda mais condicionais, você também pode usá-lo com strings:
 
 ```php
 $nome = 'Alefe';

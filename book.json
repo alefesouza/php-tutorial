@@ -1,3 +1,11 @@
 {
-    "plugins": ["exercises"]
+    "title": "Introdução a linguagem PHP",
+    "author": "Alefe Souza <contact@alefesouza.com>",
+    "language": "pt-br",
+    "plugins": ["exercises"],
+    "links": {
+        "sidebar": {
+            "GitHub": "https://github.com/alefesouza/php-tutorial"
+        }
+    }
 }

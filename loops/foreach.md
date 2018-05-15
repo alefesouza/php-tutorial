@@ -13,7 +13,7 @@ foreach ($array as $item) {
 // 1 3 5 4 6 8
 ```
 
-No exemplo acima, o comando de repetição ```foreach``` repete a mesma quantidade de itens do array, com a variável ```$item``` possuindo o valor do item referente aquela repetição, veja outro exemplo com strings:
+No exemplo acima, o comando de repetição `foreach` repete a mesma quantidade de itens do array, com a variável `$item` possuindo o valor do item referente aquela repetição, veja outro exemplo com strings:
 
 ```php
 $nomes = ['Alefe', 'Ada', 'Charles'];
@@ -26,7 +26,7 @@ foreach ($nomes as $nome) {
 // Alefe, Ada, Charles
 ```
 
-Você também pode percorrer arrays chave-valor com o ```foreach```, veja o exemplo a seguir:
+Você também pode percorrer arrays chave-valor com o `foreach`, veja o exemplo a seguir:
 
 ```php
 $dados = [

@@ -1,6 +1,6 @@
 # Variáveis
 
-Variáveis são muito comuns na programação, são formas de guardar determinado valor em uma "palavra" para utilizar depois, no PHP elas não possuem tipagem, ou seja, você não precisa declarar que elas vão receber textos ou números por exemplo.
+Variáveis são muito comuns na programação, são formas de guardar determinado valor em uma "palavra" para utilizar depois, no PHP elas não possuem tipagem, ou seja, você não precisa declarar que determinada variável irá receber apenas textos ou números por exemplo.
 
 Para declarar uma variável em PHP, você precisa utilizar o símbolo $ seguido do nome da variável, exemplo:
 

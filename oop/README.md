@@ -58,8 +58,8 @@ echo $pessoa2->getNomeCompleto(); // Rasmus Lerdorf
 
 Não é o foco desse workshop entrar em detalhes sobre orientação a objetos, portanto fazendo uma comparação direta com as linguagens Java e C#:
 
-* O método construtor não é um método com o mesmo nome da classe, e sim o método \_\_construct, que chamamos de "[método mágico](http://php.net/manual/pt_BR/language.oop5.magic.php)", que são métodos reservados das classes em PHP que fazem algo de especial.
+* O método construtor não é um método com o mesmo nome da classe, e sim o método `\_\_construct`, que chamamos de "[método mágico](http://php.net/manual/pt_BR/language.oop5.magic.php)", que são métodos reservados das classes em PHP que fazem algo de especial.
 * Para acessar métodos e atributos da própria classe, utizamos uma setinha: $variavel->atributo ao invés de variavel.atributo como nas outras linguagens.
-* Note que não utilizamos o $ depois da ->, por mais confuso que isso possa parecer inicialmente.
-* Obrigatoriamente temos que utilizar o $this-> para acessar métodos e atributos dentro da própria classe.
+* Note que não utilizamos o `$` depois da `->`, por mais confuso que isso possa parecer inicialmente.
+* Obrigatoriamente temos que utilizar o `$this->` para acessar métodos e atributos dentro da própria classe.
 * Embora seja uma boa prática, não é obrigatório o nome da classe em PHP ter o mesmo nome do arquivo, também podemos escrever códigos normalmente antes e após a declaração da classe, mas reenforçando que isto não é uma boa prática.

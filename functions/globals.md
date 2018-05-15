@@ -1,6 +1,6 @@
 # Funções globais
 
-O PHP possui **muitas** funções globais úteis para o dia a dia do desenvolvedor, elas estão sempre disponíveis sem você precisar importar nada, vou citar algumas das mais simples e utilizadas:
+Funções globais são funções que o próprio PHP disponibiza para você para facilitar o seu trabalho com o mesmo, existem **muitas** funções globais úteis para o dia a dia do desenvolvedor, elas estão sempre disponíveis sem você precisar importar nada, vou citar algumas das mais simples e utilizadas:
 
 ## Retornar números de itens em um array
 

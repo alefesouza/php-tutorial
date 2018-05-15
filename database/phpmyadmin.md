@@ -12,34 +12,34 @@ Você conseguirá acessá-lo no endereço [http://localhost/phpmyadmin](http://l
 
 Caso tenha ocorrido tudo certo, você irá estar em uma tela igual essa:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin2.png)
+![Tela inicial do phpMyAdmin](./assets/phpmyadmin/phpmyadmin2.png)
 
 Para começar, precisamos criar um banco de dados, para isso, clique em New na lateral esquerda, você irá estar em uma tela igual essa:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin3.png)
+![Tela de criação de banco de dados do phpMyAdmin](./assets/phpmyadmin/phpmyadmin3.png)
 
-Ali no campo de texto abaixo de _Create database_, digite _php_tutorial_, esse será o nome do nosso banco de dados, e clique em create, você irá cair em uma tela igual essa:
+Ali no campo de texto abaixo de _Create database_, digite _php_tutorial_, esse será o nome do nosso banco de dados, e clique em _Create_, você irá cair em uma tela igual essa:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin4.png)
+![Tela de criação de tabela do phpMyAdmin](./assets/phpmyadmin/phpmyadmin4.png)
 
-Agora criaremos uma tabela, ali no primeira campo de texto, coloque _tabela_teste_, o número de colunas pode ser 4 mesmo, então clique em Go, você irá cair uma tela igual a seguir, preencha com os seguintes dados:
+Agora criaremos uma tabela, ali no primeira campo de texto, coloque _tabela_teste_, o número de colunas pode ser 4 mesmo, então clique em _Go_, você irá cair uma tela igual a seguir, preencha com os seguintes dados:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin5.png)
+![Tela de preenchimentos da estrutura da tabela do phpMyAdmin](./assets/phpmyadmin/phpmyadmin5.png)
 
-Assim dizemos que criaremos uma coluna chamada _id_ do _int_, ou seja, ela receberá apenas números inteiros (**int**egers), marcaremos também o checkbox _A_I_, _auto increment_, isso significa que não precisamos preenchê-lo manualmente, pois a cada novo registro ele aumentará em 1 automaticamente nunca se repetindo, isso também marcará o índice PRIMARY, indicando ser a chave primária do banco.
+Assim dizemos que criaremos uma coluna chamada _id_ do _int_, ou seja, ela receberá apenas números inteiros (**int**egers), marcaremos também o checkbox _A_I_, _auto increment_, isso significa que não precisamos preenchê-lo manualmente, pois a cada novo registro ele aumentará em 1 automaticamente nunca se repetindo, isso também marcará o índice PRIMARY, indicando ser a chave primária da tabela.
 
-Também criaremos uma coluna _nome_ e _outra_ sobrenome, do tipo VARCHAR (aceita qualquer caractere) com limite de 255 caracteres, e outra coluna chamada _idade_, que também receberá apenas números inteiros.
+Também criaremos uma coluna _nome_ e outra _sobrenome_, do tipo VARCHAR (aceita qualquer caractere) com limite de 255 caracteres, e outra coluna chamada _idade_, que também receberá apenas números inteiros.
 
 Após isso, clique em Save, você irá chegar em uma tela igual a seguinte, mostrando os dados da estrutura da tabela:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin6.png)
+![Tela com a estrutura da tabela criada phpMyAdmin](./assets/phpmyadmin/phpmyadmin6.png)
 
 Você pode inserir dados pelo próprio phpMyAdmin, clique em Inserir no menu superior, e preencha os dados, deixando o campo _id_ vazio pois será preenchido automaticamente:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin7.png)
+![Tela de inserção de dados do phpMyAdmin](./assets/phpmyadmin/phpmyadmin7.png)
 
 Clique em Go e depois em Browse no menu seperior, você estará em uma tela igual a seguinte:
 
-![Tela de login do phpMyAdmin](./assets/phpmyadmin/phpmyadmin8.png)
+![Tela de resultados do phpMyAdmin](./assets/phpmyadmin/phpmyadmin8.png)
 
 Podemos criar, acessar, atualizar e excluir dados, o famoso CRUD (**C**reate, **R**ead, **U**pdate, **D**elete) pelo PHP, o que aprenderemos na página seguinte.

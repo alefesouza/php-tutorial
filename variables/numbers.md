@@ -1,4 +1,4 @@
-# Números - Variáveis
+# Variáveis: Números
 
 Você também pode armazenar números e operações matemáticas em variáveis, e até fazer operações matemáticas com duas variáveis, por exemplo:
 

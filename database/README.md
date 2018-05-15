@@ -1,6 +1,6 @@
 # Banco de Dados
 
-Para as páginas web serem realmente dinâmicas, precisamos armazenar dados em algum lugar, o mais comum é armazenarmos em um banco de dados, praticamente tudo o que você faz vai para um, como seu cadastro em algum site, algo que você posta no Facebook ou Twitter, o post de um blog, fica tudo armazenado no banco de dados das respectivas empresas.
+Para as páginas web serem realmente dinâmicas, precisamos armazenar dados em algum lugar, o mais comum é armazenarmos em um banco de dados, praticamente tudo o que você faz em um site ou aplicativo online vai para um, como seu cadastro em algum site, algo que você posta no Facebook ou Twitter, o post em um blog, fica tudo armazenado no banco de dados das respectivas empresas.
 
 A lista de tweets que você vê por exemplo, o Twitter checa no banco de dados deles todos os tweets dos usuários que você segue assim exibindo para você.
 

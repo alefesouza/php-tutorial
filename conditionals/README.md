@@ -13,6 +13,6 @@ if ($var1 + $var2 == 5) {
 }
 ```
 
-Nesse caso a segunda condição nunca será executada, pois o valor da variável $var1 somado com o valor da $var2 é 5.
+Nesse caso a segunda condição nunca será executada, pois o valor da variável `$var1` somado com o valor da `$var2` é 5.
 
-Detalhes como o else e condicionais mais avançadas serão abordadas na próxima página.
+Detalhes como o `else` e condicionais mais avançadas serão abordadas na próxima página.
