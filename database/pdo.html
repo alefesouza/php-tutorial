@@ -580,9 +580,9 @@ $db_senha = <span class="hljs-string">&apos;&apos;</span>;
 $conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&quot;mysql:host=$db_host;dbname=$db_nome;charset=utf8&quot;</span>, $db_user, $db_senha);
 </code></pre>
 <p>Note que as informa&#xE7;&#xF5;es que colocamos acima s&#xE3;o as mesma que colocamos no phpMyAdmin.</p>
-<p>Vamos em seguidas fazer um CRUD utilizando o PDO.</p>
+<p>Vamos em seguida fazer um CRUD utilizando o PDO.</p>
 <h2 id="create">Create</h2>
-<p>Ap&#xF3;s isso, poderemos executar queries SQL, que &#xE9; a forma mais comum de executar comandos em bancos de dados.</p>
+<p>Com o c&#xF3;digo acima, podemos executar queries SQL, que &#xE9; a forma mais comum de executar comandos em bancos de dados.</p>
 <p>Por exemplo, caso queiramos inserir um dado na tabela <code>tabela_teste</code> que criamos pelo phpMyAdmin, podemos executar o seguinte comando:</p>
 <pre><code class="lang-php">$conexao = <span class="hljs-keyword">new</span> PDO(<span class="hljs-string">&apos;mysql:host=localhost;dbname=php_tutorial;charset=utf8&apos;</span>, <span class="hljs-string">&apos;root&apos;</span>, <span class="hljs-string">&apos;&apos;</span>);
 
@@ -594,8 +594,8 @@ $query-&gt;bindValue(<span class="hljs-string">&apos;:idade&apos;</span>, <span 
 
 $query-&gt;execute();
 </code></pre>
-<p>Inicialmente criamos nossa conex&#xE3;o com o banco de dados, ent&#xE3;o declaramos uma vari&#xE1;vel <code>$query</code> onde colocaremos nossa instru&#xE7;&#xE3;o SQL que queremos executar no banco, no caso &#xE9; um <code>INSERT</code> na tabela <code>tabela_teste</code> que criamos no phpMyAdmin, note que a query possui os par&#xE2;metros <code>:nome</code>, <code>:sobrenome</code> e <code>:idade</code>, esses valores ser&#xE3;o substitu&#xED;dos pelos <code>bindValue</code> no c&#xF3;digo logo em seguida.</p>
-<p>Com o m&#xE9;todo <code>bindValue</code> podemos substituir par&#xE2;metros na nossa query SQL, no pr&#xF3;ximo par&#xE1;grafo eu explico o por qu&#xEA; disso, no primeiro argumento colocando qual par&#xE2;metro queremos substituir, e em seguida o seu valor, ent&#xE3;o usamos o comando para <code>$var-&gt;execute()</code> executar nossa query, que no final executar&#xE1; o seguinte comando no banco de dados:</p>
+<p>Inicialmente criamos nossa conex&#xE3;o com o banco de dados, ent&#xE3;o declaramos uma vari&#xE1;vel <code>$query</code> onde colocaremos nossa instru&#xE7;&#xE3;o SQL que queremos executar no banco de dados, no caso &#xE9; um <code>INSERT</code> na tabela <code>tabela_teste</code> que criamos no phpMyAdmin, note que a query possui os par&#xE2;metros <code>:nome</code>, <code>:sobrenome</code> e <code>:idade</code>, esses valores ser&#xE3;o substitu&#xED;dos pelos <code>bindValue</code> no c&#xF3;digo logo em seguida.</p>
+<p>Com o m&#xE9;todo <code>bindValue</code> podemos substituir par&#xE2;metros na nossa query SQL, no pr&#xF3;ximo par&#xE1;grafo eu explico o por qu&#xEA; disso, no primeiro argumento colocando qual par&#xE2;metro queremos substituir, e em seguida o seu valor, ent&#xE3;o usamos o comando <code>$query-&gt;execute()</code> para executar nossa query, que no final executar&#xE1; o seguinte comando no banco de dados:</p>
 <pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> tabela_teste <span class="hljs-keyword">VALUES</span> (nome, sobrenome, idade) <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">&apos;Rasmus&apos;</span>, <span class="hljs-string">&apos;Lerdorf&apos;</span>, <span class="hljs-number">49</span>);
 </code></pre>
 <p>Fazendo os dados da nossa tabela ficar assim no phpMyAdmin:</p>
@@ -700,7 +700,7 @@ $query-&gt;execute();
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PDO","level":"1.9.2","depth":2,"next":{"title":"Formulários","level":"1.10","depth":1,"path":"forms/README.md","ref":"forms/README.md","articles":[]},"previous":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"database/pdo.md","mtime":"2018-05-15T02:46:58.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T02:47:27.869Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"PDO","level":"1.9.2","depth":2,"next":{"title":"Formulários","level":"1.10","depth":1,"path":"forms/README.md","ref":"forms/README.md","articles":[]},"previous":{"title":"phpMyAdmin","level":"1.9.1","depth":2,"path":"database/phpmyadmin.md","ref":"database/phpmyadmin.md","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Alefe Souza <contact@alefesouza.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Introdução a linguagem PHP","language":"pt-br","links":{"sidebar":{"GitHub":"https://github.com/alefesouza/php-tutorial"}},"gitbook":"*"},"file":{"path":"database/pdo.md","mtime":"2018-05-26T20:03:39.211Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-26T20:03:58.074Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -753,6 +753,6 @@ $query-&gt;execute();
     
 
 
-    </body>
+    <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119886172-2"></script> <script>   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-119886172-2'); </script></body>
 </html>
 
