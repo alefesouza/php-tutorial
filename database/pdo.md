@@ -17,11 +17,11 @@ $conexao = new PDO("mysql:host=$db_host;dbname=$db_nome;charset=utf8", $db_user,
 
 Note que as informações que colocamos acima são as mesma que colocamos no phpMyAdmin.
 
-Vamos em seguidas fazer um CRUD utilizando o PDO.
+Vamos em seguida fazer um CRUD utilizando o PDO.
 
 ## Create
 
-Após isso, poderemos executar queries SQL, que é a forma mais comum de executar comandos em bancos de dados.
+Com o código acima, podemos executar queries SQL, que é a forma mais comum de executar comandos em bancos de dados.
 
 Por exemplo, caso queiramos inserir um dado na tabela `tabela_teste` que criamos pelo phpMyAdmin, podemos executar o seguinte comando:
 
@@ -37,9 +37,9 @@ $query->bindValue(':idade', 49);
 $query->execute();
 ```
 
-Inicialmente criamos nossa conexão com o banco de dados, então declaramos uma variável `$query` onde colocaremos nossa instrução SQL que queremos executar no banco, no caso é um `INSERT` na tabela `tabela_teste` que criamos no phpMyAdmin, note que a query possui os parâmetros `:nome`, `:sobrenome` e `:idade`, esses valores serão substituídos pelos `bindValue` no código logo em seguida.
+Inicialmente criamos nossa conexão com o banco de dados, então declaramos uma variável `$query` onde colocaremos nossa instrução SQL que queremos executar no banco de dados, no caso é um `INSERT` na tabela `tabela_teste` que criamos no phpMyAdmin, note que a query possui os parâmetros `:nome`, `:sobrenome` e `:idade`, esses valores serão substituídos pelos `bindValue` no código logo em seguida.
 
-Com o método `bindValue` podemos substituir parâmetros na nossa query SQL, no próximo parágrafo eu explico o por quê disso, no primeiro argumento colocando qual parâmetro queremos substituir, e em seguida o seu valor, então usamos o comando para `$var->execute()` executar nossa query, que no final executará o seguinte comando no banco de dados:
+Com o método `bindValue` podemos substituir parâmetros na nossa query SQL, no próximo parágrafo eu explico o por quê disso, no primeiro argumento colocando qual parâmetro queremos substituir, e em seguida o seu valor, então usamos o comando `$query->execute()` para executar nossa query, que no final executará o seguinte comando no banco de dados:
 
 ```sql
 INSERT INTO tabela_teste VALUES (nome, sobrenome, idade) VALUES ('Rasmus', 'Lerdorf', 49);

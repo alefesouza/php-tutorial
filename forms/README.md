@@ -28,7 +28,7 @@ Veja o exemplo a seguir de um formulário em HTML, no qual salvamos os dados no 
 
 Existem dois métodos de formulários, o GET e o POST, o primeiro exibe as informações na url, ótimo para buscas, já o segundo não exibe as informações, ótimo para login e inserção de dados.
 
-Ao clicar no botão enviar, o navegador envia os dados inseridos no formulário para o arquivo salvar.php, no qual você por acessar com a [variável superglobal](http://php.net/manual/pt_BR/language.variables.superglobals.php) `$_POST` caso você tenha utilizado o método POST, e a superglobal `$_GET` caso você tenha utilizando o método GET, as mesmas são um array chave-valor, cujo as chaves são os `name=""` do formulário, e o valor os valores inseridos pelo usuários, veja o arquivo salvar.php a seguir:
+Ao clicar no botão **Enviar**, o navegador envia os dados inseridos no formulário para o arquivo salvar.php, no qual você por acessar com a [variável superglobal](http://php.net/manual/pt_BR/language.variables.superglobals.php) `$_POST` caso você tenha utilizado o método POST, e a superglobal `$_GET` caso você tenha utilizando o método GET, as mesmas são um array chave-valor, cujo as chaves são os `name=""` do formulário, e o valor os valores inseridos pelo usuários, veja o arquivo salvar.php a seguir:
 
 ```php
 // salvar.php
@@ -45,7 +45,7 @@ $query->execute();
 echo $_POST['nome']. ' ' . $_POST['sobrenome'] . ' foi cadastrado com sucesso';
 ```
 
-Note os $\_POST, as chaves deles são os mesmos `name=""` do formulário, mas atenção, são os `name=""`, não os `id=""`, eles vão possuir os valores inseridos pelo usuário, veja o formulário preenchido:
+Note os `$_POST`, as chaves deles são os mesmos `name=""` do formulário, eles vão possuir os valores inseridos pelo usuário, veja o formulário preenchido:
 
 ![Formulário de cadastro preenchido](./assets/form1.png)
 
@@ -95,17 +95,17 @@ while ($linha = $query->fetch(PDO::FETCH_ASSOC)) {
 }
 ```
 
-O comando `LIKE` é usado normalmente para buscas, note que fazemos uma concatenação no `bindValue` com % no início e no final, isso significa que queremos resultados que possuam em qualquer parte o valor de `$_GET['nome']`, caso tiver % apenas no início, significaria que queririamos apenas o que termina com o valor de `$_GET['nome']`, e se estivesse com % apenas no começo, queririamos apenas o que começa com esse valor.
+O comando `LIKE` é usado normalmente para buscas, note que fazemos uma concatenação no `bindValue` com % no início e no final, isso significa que queremos resultados que possuam em qualquer parte o valor de `$_GET['nome']`, caso tiver % apenas no início, significaria que queremos apenas o que termina com o valor de `$_GET['nome']`, e se estivesse com % apenas no começo, queremos apenas o que começa com esse valor.
 
 Agora no navegador, nosso formulário ficará assim:
 
 ![Formulário de busca](./assets/form5.png)
 
-Ao clicar em Buscar, irá para essa página:
+Ao clicar em **Buscar**, irá para essa página:
 
 ![Resultado de lef](./assets/form6.png)
 
-Note o `?nome=lef` na URL, isso não ocorre quando o formulário é do tipo post, nesse caso, `?nome=` é o campo de texto com `name="nome"` do nosso exemplo.
+Note o `?nome=lef` na URL, isso não ocorre quando o formulário é do tipo POST, nesse caso, `?nome=` é o campo de texto com `name="nome"` do nosso exemplo.
 
 Note também que ele retornou o resultado cujo o campo nome do banco de dados possui "lef", por causa do % explicado anteriormente, podendo mudar manualmente o `?nome=` na URL também para realizar outra busca:
 

@@ -12,7 +12,7 @@ echo $nome.$numero; // Alefe5
 echo $nome . ' ' . $sobrenome; // Alefe Souza
 ```
 
-Note que diferente da maioria das linguagem, no PHP se utiliza o `.` (ponto) para fazer a concatenação de strings, ao invés do `+`.
+Note que diferente da maioria das linguagens de programação, no PHP se utiliza o `.` (ponto) para fazer a concatenação de strings, ao invés do `+`.
 
 ## A diferença de aspas simples e duplas:
 

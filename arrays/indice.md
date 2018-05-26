@@ -15,11 +15,11 @@ Os valores de um array em PHP podem ser de qualquer tipo, inclusive embora não 
 
 ```php
 $nome = 'Alefe';
-$array = [21, 'PHP', $nome];
+$array = [21, 'PHP', true, $nome];
 
 echo $array[0]; // Exibe: 21
 echo $array[1]; // Exibe: PHP
-echo $array[2]; // Exibe: Alefe
+echo $array[3]; // Exibe: Alefe
 ```
 
 Você também pode alterar o valor de itens no array da mesma forma que altera uma variável, exemplo:

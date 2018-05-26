@@ -1,6 +1,6 @@
 # Arrays: Multidimensional
 
-Os arrays multidimensionais são arrays que possem outros arrays dentro, exemplo:
+Os arrays multidimensionais são arrays que possuem outros arrays dentro, exemplo:
 
 ```php
 $array = [[5, 3, 7], [2, 9, 6]];

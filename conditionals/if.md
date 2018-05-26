@@ -12,7 +12,7 @@ if ($nome == 'Alefe') {
 }
 ```
 
-Note que usamos o comparador `==` para verificar o valor da variável `$nome`, que se caso for igual a 'Alefe', executará o primeiro bloco de código, senão (`else`) executará o segundo.
+Note que usamos o comparador `==` para verificar o valor da variável `$nome`, que se caso for igual a **Alefe**, executará o primeiro bloco de código, senão (`else`) executará o segundo.
 
 Podemos também fazer comparações com números:
 
@@ -32,7 +32,7 @@ if ($numero > 10) {
 }
 ```
 
-Note que apenas a terceira condição será executada, pois ela possui um valor maior ou igual a 5 e é a primeira a ser verdadeira, pois não passa em nenhuma das condições anteriores, porém as condições seguintes, como a que compara se a variável `$numero` é maior ou igual a 3, não serão executadas por estarem no mesmo `else if`, apenas uma condição pode ser executada em um `if` com várias condições, mas você pode iniciar novas condicionais normalmente, bastando apenas não colocar `else` antes do comando `if`, no próximo código há um exemplo.
+Note que apenas a terceira condição será executada, pois ela possui um valor maior ou igual a **5** e é a primeira a ser verdadeira, pois não passa em nenhuma das condições anteriores, porém as condições seguintes, como a que compara se a variável `$numero` é maior ou igual a **3**, não serão executadas por estarem no mesmo `else if`, apenas uma condição pode ser executada em um `if` com várias condições, mas você pode iniciar novas condicionais normalmente, bastando apenas não colocar `else` antes do comando `if`, no próximo código há um exemplo.
 
 Existem outras condicionais, para comparar se um número é menor que outro ou se determinado valor é diferente, por exemplo:
 

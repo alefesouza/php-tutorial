@@ -23,7 +23,7 @@ foreach ($nomes as $nome) {
 }
 
 // No final exibe:
-// Alefe, Ada, Charles
+// Alefe, Ada, Charles, 
 ```
 
 Você também pode percorrer arrays chave-valor com o `foreach`, veja o exemplo a seguir:

@@ -1,6 +1,6 @@
 # Comandos de repetição: continue e break
 
-Com as palavras-chaves `continue` e `break` podemos pular ou parar a execução de qualquer um dos comandos de repetição mencionados anteriormente, veja o exemplo a seguir:
+Com as palavras-chave `continue` e `break` podemos pular ou parar a execução de qualquer um dos comandos de repetição mencionados anteriormente, veja o exemplo a seguir:
 
 ```php
 for ($i = 0; $i < 10; $i++) {
@@ -12,7 +12,7 @@ for ($i = 0; $i < 10; $i++) {
         break;
     }
 
-    echo $i;
+    echo $i . ' ';
 }
 
 echo 'Final';

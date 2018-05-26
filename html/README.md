@@ -2,7 +2,7 @@
 
 Uma das melhores coisas do PHP (ou piores, se usada de maneira errada) é poder ser usado em conjunto com código HTML, de forma que você pode colocar condicionais que exibem um código HTML ou outro, usar loops para exibir listas, etc.
 
-Lembra do começo do HTML onde falado que devemos usar o `?>` apenas quando não tiver apenas HTML no arquivo? Veja o exemplo a seguir:
+Lembra do começo do tutorial onde foi falado que não devemos usar o `?>` apenas quando tiver apenas PHP no arquivo? Veja o exemplo a seguir:
 
 ```html
 <b><?php echo 2 + 3; ?></b>
@@ -70,15 +70,15 @@ Que exibirá um lista igual a seguir:
 * Ada
 * Charles
 
-Embora pareça muito legal, não é uma boa prática deixar lógica e HTML no mesmo arquivo, pois conforme o projeto cresce, pode deixar o código feio e confuso, houve uma época que isso era muito comum e acabou deixando o PHP com uma certa má fama por ser comum misturar todo o código em um único arquivo.
+Embora pareça muito legal, não é uma boa prática deixar lógica e HTML no mesmo arquivo, pois conforme o projeto cresce, pode deixar o código feio e confuso, houve uma época que isso era muito comum e acabou deixando o PHP com uma certa má fama por ser muito fácil essa mistura de todo o código em um único arquivo.
 
 Assim como em qualquer outra linguagem de back-end, o ideal seria utilizar algum framework para gerenciar melhor o código PHP (controller) e o HTML (view), mas como o foco desse tutorial é apenas dar uma introdução, no momento o melhor que podemos fazer seria deixar todo o código PHP em um arquivo e o código HTML em outro, apenas exibindo o valor das variáveis, caso você tenha mais interesse na linguagem, recomendo estudar algum framework PHP, existem vários, os mais famosos são [Zend](https://framework.zend.com), [Symfony](https://symfony.com), [CodeIgniter](https://codeigniter.com), [CakePHP](https://cakephp.org), e o meu favorito, [Laravel](http://laravel.com).
 
-Continuando o tutorial, existe a função global `include`, no qual você adicionar todo o código de um arquivo PHP em outro, veremos um separação e lógica e HTML no exemplo a seguir:
+Continuando o tutorial, existe a função global `include`, no qual você adicionar todo o código de um arquivo PHP em outro, veremos uma separação de lógica e HTML no exemplo a seguir:
 
-```php
-// arquivo index.php
+```html
 <?php
+// arquivo index.php
 
 $dados = [
     'nome' => 'Alefe',
@@ -98,7 +98,7 @@ Agora o código do arquivo index.php dentro da pasta views:
 <p><b>Idade:</b> <?= $dados['idade']; ?> anos</p>
 ```
 
-O código enviado HTML para o navegador será:
+Ao abrir o arquivo index.php, o código enviado para o navegador será:
 
 ```html
 <p><b>Nome:</b> Alefe</p>

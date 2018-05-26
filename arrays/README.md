@@ -1,6 +1,6 @@
 # Arrays
 
-Explicando de forma muito simples, arrays são formas de armazenar vários valores em uma só variável, muito útil quando precisamos armazenar listas ou algo que seja múltipla coisa, veja o exemplo de array a seguir:
+Explicando de forma muito simples, arrays são formas de armazenar vários valores em uma só variável, muito útil quando precisamos armazenar listas ou algo que seja múltipla escolha, veja o exemplo de array a seguir:
 
 ```php
 $nomes = ['Ada', 'Alefe', 'Charles'];

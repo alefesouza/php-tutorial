@@ -13,7 +13,7 @@ Esse é um dos processos mais básicos de uma linguagem de back-end, que pode se
 Porém uma grande vantagem do PHP é ser altamente flexível, podendo rodar em praticamente qualquer sistema operacional, não requerendo muitas coisas para ser executado, o que faz com que praticamente qualquer serviço de hospedagem tenha suporte ao PHP, pois é muito fácil e barato de utiliza-lo atráves do LAMP (Linux, Apache, MySQL e PHP), ajudando ele a conquistar 83% de todos os websites atualmente (05/2018), e também deu início a grandes projetos como:
 
 * Facebook, o Mark Zuckerberg começou a programar ele em 2004 utilizando o PHP.
-* WordPress, usado em aproximamente 30% dos websites, principalmente em blog e sites de notícias.
+* WordPress, usado em aproximamente 30% dos websites, principalmente em blogs e sites de notícias.
 * Wikipedia, mais precisamente o MediaWiki, usando por praticamente todos os websites no formato Wiki.
 
 Também é utilizando em muitos sites de e-commerce, através do Magento, OpenCart, PrestaShop, etc.

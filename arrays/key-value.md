@@ -1,6 +1,6 @@
 # Arrays: Chave-Valor
 
-Com o array chave-valor você pode usar palavras ao invés de índices para armazenas valores em um array, exemplo:
+Com o array chave-valor você pode usar palavras-chave ao invés de índices para armazenas valores em um array, exemplo:
 
 ```php
 $array = [
@@ -18,4 +18,4 @@ $array['sobrenome'] = 'Pereira';
 echo $array['sobrenome']; // Exibe: Pereira
 ```
 
-Como vimos no exemplo acima, podemos atribuir uma chave a um valor na declaração de um array utilizando =>, porém para alterar o valor após a declaração usamos o = (igual), também deve ser alterado um de cada vez.
+Como vimos no exemplo acima, podemos atribuir uma chave a um valor na declaração de um array utilizando `=>`, porém para alterar o valor após a declaração usamos o `=` (igual), também deve ser alterado um de cada vez.

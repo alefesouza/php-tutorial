@@ -10,14 +10,14 @@ function soma($num1, $num2) {
 echo soma(2, 3); // Exibe: 5
 ```
 
-Analisando o código acima, usamos a palavra-chave `function` seguido do nome que queremos dar a função, e então colocamos entre parentes os argumentos da função, que funcionam como variáveis, podendo usar e ser modificado dentro do bloco da função.
+Analisando o código acima, usamos o comando `function` seguido do nome que queremos dar a função, e então colocamos entre parênteses os argumentos da função, que funcionam como variáveis, podendo usar e ser modificado dentro do bloco da função.
 
-Usamos a palavra-chave `return` para retorna algum valor ou parar a execução dela, o que não é obrigatório caso você queira apenas repetir um algoritmo, é comum ter um return vazio dentro de condicionais em funções que não retornam valor, exemplo:
+Usamos a palavra-chave `return` para retornar algum valor ou parar a execução da função, o que não é obrigatório caso você queira apenas repetir um algoritmo, é comum ter um return vazio dentro de condicionais em funções que não retornam valor, exemplo:
 
 ```php
 function teste($nome) {
     if ($nome == 'Alefe')  {
-         echo 'Mensagem exibida se $nome for igual a Alefe';
+         echo 'Mensagem exibida se $nome for igual a Alefe, em seguida para execução da função';
          return;
     }
 

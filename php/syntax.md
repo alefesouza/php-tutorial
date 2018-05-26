@@ -25,7 +25,7 @@ Analisando o código acima, iniciamos com um comentário apenas para indicar que
 
 ## Comentários
 
-Comentários são mensagens que você pode deixar livremente pelo código, seja para documentar o código, marcar algo para fazer no futuro ~~e deixar mensagens para quem for modificar o código~~, no PHP utilizamos // para comentários de uma linha e /\* \*/ para comentários com diversas linhas, exemplo:
+Comentários são mensagens que você pode deixar livremente pelo código, seja para documentar o código, marcar algo para fazer no futuro ~~ou deixar mensagens para quem for modificar o código no futuro~~, no PHP utilizamos `//` para comentários de uma linha e `/* */` para comentários com diversas linhas, exemplo:
 
 ```php
 // Comentário de uma linha
